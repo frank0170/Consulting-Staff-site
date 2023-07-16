@@ -97,7 +97,7 @@ export default function News() {
                     </ul>
                   </div>
                   <h3 className="text-xl font-bold leading-snug tracking-tight">
-                    <a href="#0" className="hover:underline">Invest Network & Co. SRL</a>
+                    <a href="#0" className="hover:underline">Zetu Dana SRL</a>
                   </h3>
                 </header>
                 {/* <footer className="text-sm flex items-center mt-4">
@@ -127,13 +127,13 @@ export default function News() {
                       <li className="m-1">
                         <a className="inline-flex text-center text-gray-100 py-1 px-3 rounded-full bg-orange-500 hover:bg-orange-600 transition duration-150 ease-in-out" href="#0">Case studies</a>
                       </li>
-                      <li className="m-1">
+                      {/* <li className="m-1">
                         <a className="inline-flex text-center text-gray-800 py-1 px-3 rounded-full bg-white hover:bg-gray-100 shadow-sm transition duration-150 ease-in-out" href="#0">Tinder</a>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
                   <h3 className="text-xl font-bold leading-snug tracking-tight">
-                    <a href="#0" className="hover:underline">BlockArch 64 SRL</a>
+                    <a href="#0" className="hover:underline">Valery Evenimente SRL</a>
                   </h3>
                 </header>
                 {/* <footer className="text-sm flex items-center mt-4">

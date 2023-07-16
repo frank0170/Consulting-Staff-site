@@ -12,7 +12,7 @@ export default function FeaturesWorld() {
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
             <h1 className="h2 mb-4">Extindeţi-vă networkul si descoperiti noi oportunitati</h1>
-            <p className="text-xl text-gray-600">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat.</p>
+            <p className="text-xl text-gray-600">O firmă trebuie să-și extindă rețeaua pentru a-și deschide noi oportunități de afaceri, pentru a-și consolida relațiile cu clienții și partenerii existenți și pentru a obține acces la resurse și expertiză suplimentară.</p>
           </div>
 
           {/* World illustration */}
