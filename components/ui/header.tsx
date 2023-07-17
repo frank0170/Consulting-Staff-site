@@ -282,7 +282,7 @@ export default function Header() {
             <ul className="flex grow justify-end flex-wrap items-center">
               <li>
                 <Link
-                  href="/pricing"
+                  href="/tutorials"
                   className="text-gray-600 hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out"
                 >
                   Proiecte Fonduri
@@ -298,7 +298,7 @@ export default function Header() {
               </li>
               <li>
                 <Link
-                  href="/tutorials"
+                  href="/pricing"
                   className="text-gray-600 hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out"
                 >
                   Promovare Servicii
