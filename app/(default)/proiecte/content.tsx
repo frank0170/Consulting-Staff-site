@@ -1,10 +1,16 @@
+'use client'
+
 import TutorialImage01 from "@/public/images/tutorial-01.jpg";
 import TutorialImage02 from "@/public/images/tutorial-02.jpg";
 import TutorialImage03 from "@/public/images/tutorial-03.jpg";
 import TutorialImage04 from "@/public/images/tutorial-04.jpg";
 import CardArticle from "@/components/cardProiect";
+import React, { useState, useEffect } from 'react'
 
 export default function TutorialsContent() {
+
+  const [post, setPost] = useState<any>([])
+
   const postari = [
     {
       imagine: TutorialImage01,
@@ -47,6 +53,24 @@ export default function TutorialsContent() {
       firma: "tractor",
     },
   ];
+
+  useEffect(() => {
+    async function getProiecte() {
+      const response = await fetch("http://localhost:5080/proiecte");
+
+      if (!response.ok) {
+        const message = `An error occurred: ${response.statusText}`;
+        window.alert(message);
+        return;
+      }
+
+      const records = await response.json();
+      console.log(records)
+      setPost(records);
+    }
+
+    getProiecte();
+  }, []);
 
   return (
     <section className="relative">
@@ -94,11 +118,12 @@ export default function TutorialsContent() {
           <div className="max-w-sm mx-auto md:max-w-none">
             {/* Articles container */}
             <div className="grid gap-12 md:grid-cols-3 md:gap-x-6 md:gap-y-8 items-start">
-              {postari.map((card, index) => {
+              {post.map((card: any, index: any) => {
+                const imageSrc = typeof card.imagine === 'string' && card.imagine.trim() !== '' ? card.imagine : TutorialImage01;
                 return (
                   <a href={`${'/'}${'proiecte'}${'/'}${card.titlu}`} key={index}>
                     <CardArticle
-                      imagine={card.imagine}
+                      imagine={imageSrc}
                       titlu={card.titlu}
                       beneficiari={card.beneficiari}
                       valoare={card.valoare}

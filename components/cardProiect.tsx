@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import TutorialImage01 from "@/public/images/tutorial-01.jpg";
    
   export default function CardArticle({imagine, titlu, beneficiari, valoare, cofinantare, locatie, proiect, firma}: any) {
     return (
@@ -8,7 +9,7 @@ import Image from 'next/image'
 <header>
   <div className="block mb-6" suppressHydrationWarning>
     <figure className="relative h-0 pb-9/16 overflow-hidden translate-z-0 rounded">
-      <Image className="absolute inset-0 w-full h-full object-cover transform scale-105 hover:-translate-y-1 transition duration-700 ease-out" src={imagine} width={352} height={198} alt={imagine} />
+      <Image className="absolute inset-0 w-full h-full object-cover transform scale-105 hover:-translate-y-1 transition duration-700 ease-out" src={imagine || TutorialImage01} width={352} height={198} alt="imagine" />
     </figure>
   </div>
   <div className="mb-3">
