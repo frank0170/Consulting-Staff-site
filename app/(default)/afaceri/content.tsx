@@ -1,62 +1,44 @@
-import Image from "next/image";
 import TutorialImage01 from "@/public/images/tutorial-01.jpg";
 import TutorialImage02 from "@/public/images/tutorial-02.jpg";
 import TutorialImage03 from "@/public/images/tutorial-03.jpg";
 import TutorialImage04 from "@/public/images/tutorial-04.jpg";
-import TutorialImage05 from "@/public/images/tutorial-05.jpg";
-import TutorialImage06 from "@/public/images/tutorial-06.jpg";
-import TutorialImage07 from "@/public/images/tutorial-07.jpg";
-import TutorialImage08 from "@/public/images/tutorial-08.jpg";
-import TutorialImage09 from "@/public/images/tutorial-09.jpg";
-import NewsAuthor01 from "@/public/images/news-author-01.jpg";
-import NewsAuthor02 from "@/public/images/news-author-02.jpg";
-import NewsAuthor03 from "@/public/images/news-author-03.jpg";
-import NewsAuthor04 from "@/public/images/news-author-04.jpg";
-import NewsAuthor05 from "@/public/images/news-author-05.jpg";
-import NewsAuthor06 from "@/public/images/news-author-06.jpg";
-import CardArticle from "@/components/cardArticol";
+import CardArticle from "@/components/cardAfaceri";
 
 export default function TutorialsContent() {
+
+
   const postari = [
     {
       imagine: TutorialImage01,
-      titlu: "Proiect 1",
-      beneficiari: "1",
-      valoare: "50-100",
-      cofinantare: "10%",
+      titlu: "Afacere 1",
+      descriere: "o afacere prospera",
+      pret: "6.000 Euro",
+      proiect: "proiect",
       locatie: " vest",
-      proiect: "PNRR",
-      firma: "tractor",
     },
     {
-      imagine: TutorialImage02,
-      titlu: "Proiect 2",
-      beneficiari: "1",
-      valoare: "50-100",
-      cofinantare: "10%",
+      imagine: TutorialImage01,
+      titlu: "Afacere 2",
+      descriere: "o afacere prospera",
+      pret: "3.000 Euro",
+      proiect: "proiect",
       locatie: " vest",
-      proiect: "PNRR",
-      firma: "tractor",
     },
     {
-      imagine: TutorialImage03,
-      titlu: "Proiect 3",
-      beneficiari: "1",
-      valoare: "50-100",
-      cofinantare: "10%",
+      imagine: TutorialImage01,
+      titlu: "Afacere 3",
+      descriere: "o afacere prospera",
+      pret: "5.000 Euro",
+      proiect: "proiect",
       locatie: " vest",
-      proiect: "PNRR",
-      firma: "tractor",
     },
     {
-      imagine: TutorialImage04,
-      titlu: "Proiect 4",
-      beneficiari: "1",
-      valoare: "50-100",
-      cofinantare: "10%",
+      imagine: TutorialImage01,
+      titlu: "Afacere 4",
+      descriere: "o afacere prospera",
+      pret: "10.000 Euro",
+      proiect: "proiect",
       locatie: " vest",
-      proiect: "PNRR",
-      firma: "tractor",
     },
   ];
 
@@ -66,8 +48,8 @@ export default function TutorialsContent() {
         <div className="pt-20 pb-12 md:pt-40 md:pb-20">
           {/* Page header */}
           <div className="max-w-3xl pb-12 md:pb-20 text-center md:text-left">
-            <h1 className="h1">Proiecte Fonduri</h1>
-            <p className="text-xl text-gray-600">Fonduri nerambursabile pentru intreprinderi</p>
+            <h1 className="h1">Afaceri de Vanzare</h1>
+            <p className="text-xl text-gray-600">Caută o afacere cu potențial de dezvoltare</p>
 
           </div>
 
@@ -106,18 +88,16 @@ export default function TutorialsContent() {
           <div className="max-w-sm mx-auto md:max-w-none">
             {/* Articles container */}
             <div className="grid gap-12 md:grid-cols-3 md:gap-x-6 md:gap-y-8 items-start">
-              {postari.map((card) => {
+              {postari.map((card, index) => {
                 return (
-                  <a href={`${'/'}${'tutorials'}${'/'}${card.titlu}`}>
+                  <a href={`${'/'}${'proiecte'}${'/'}${card.titlu}`} key={index}>
                     <CardArticle
                       imagine={card.imagine}
                       titlu={card.titlu}
-                      beneficiari={card.beneficiari}
-                      valoare={card.valoare}
-                      cofinantare={card.cofinantare}
+                      descriere={card.descriere}
                       locatie={card.locatie}
                       proiect={card.proiect}
-                      firma={card.firma}
+                      pret={card.pret}
                     />
                   </a>
                 );

@@ -2,13 +2,13 @@
 
 import Image from 'next/image'
    
-  export default function CardArticle({imagine, titlu, beneficiari, valoare, cofinantare, locatie, proiect, firma}: any) {
+  export default function CardArticle({imagine, titlu, descriere, pret, proiect, locatie}: any) {
     return (
     <article className="flex flex-col h-full shadow-lg rounded-xl" data-aos="zoom-y-out">
 <header>
-  <div className="block mb-6">
+  <div className="block mb-6" suppressHydrationWarning>
     <figure className="relative h-0 pb-9/16 overflow-hidden translate-z-0 rounded">
-      <Image className="absolute inset-0 w-full h-full object-cover transform scale-105 hover:-translate-y-1 transition duration-700 ease-out" src={imagine} width={352} height={198} alt="News 01" />
+      <Image className="absolute inset-0 w-full h-full object-cover transform scale-105 hover:-translate-y-1 transition duration-700 ease-out" src={imagine} width={352} height={198} alt={imagine} />
     </figure>
   </div>
   <div className="mb-3">
@@ -28,10 +28,10 @@ import Image from 'next/image'
     <p>{titlu}</p>
   </h3>
 </header>
-<p className="text-gray-600 grow"><b>Beneficiari:</b> {beneficiari}</p>
-<p className="text-gray-600 grow"><b>Valoare:</b> {valoare}</p>
-<p className="text-gray-600 grow"><b>Cofinantare:</b> {cofinantare}</p>
-<p className="text-gray-600 grow"><b>Locatie:</b> {locatie}</p>
+<p className="text-gray-600 grow">{descriere}</p>
+
+<p className="text-gray-600 grow"><b>{locatie}</b></p>
+
 
 <footer className="text-sm flex items-center mt-4">
   {/* <div>

@@ -13,8 +13,8 @@ export default function Support() {
 
             {/* Section header */}
             <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-              <h1 className="h1 mb-4" data-aos="zoom-y-out">Get in touch with our team</h1>
-              <p className="text-xl text-gray-600" data-aos="zoom-y-out" data-aos-delay="150">Select a category to email the support team or contact us directly by using the form below.</p>
+              <h1 className="h1 mb-4" data-aos="zoom-y-out">Luați legătura cu echipa noastră</h1>
+              <p className="text-xl text-gray-600" data-aos="zoom-y-out" data-aos-delay="150">Selectați o categorie pentru a trimite un e-mail echipei de asistență sau contactați-ne direct utilizând formularul de mai jos.</p>
             </div>
 
             {/* Items */}
@@ -31,7 +31,7 @@ export default function Support() {
                   </g>
                 </svg>
                 <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Tech Support</h4>
-                <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                {/* <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
               </div>
 
               {/* 2nd item */}
@@ -47,7 +47,7 @@ export default function Support() {
                   </g>
                 </svg>
                 <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Website Issue</h4>
-                <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                {/* <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
               </div>
 
               {/* 3rd item */}
@@ -62,7 +62,7 @@ export default function Support() {
                   </g>
                 </svg>
                 <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Contact Sales</h4>
-                <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                {/* <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
               </div>
 
               {/* 4th item */}
@@ -77,7 +77,7 @@ export default function Support() {
                   </g>
                 </svg>
                 <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Live Chat</h4>
-                <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                {/* <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
               </div>
 
               {/* 5th item */}
@@ -93,7 +93,7 @@ export default function Support() {
                   </g>
                 </svg>
                 <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Affiliate Program</h4>
-                <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                {/* <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
               </div>
 
               {/* 6th item */}
@@ -108,7 +108,7 @@ export default function Support() {
                   </g>
                 </svg>
                 <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Billing & Account</h4>
-                <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                {/* <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
               </div>
 
             </div>
@@ -124,18 +124,18 @@ export default function Support() {
 
             {/* Section header */}
             <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-              <h1 className="h1">Have a question about Simple? Contact us directly</h1>
+              <h1 className="h1">Ai o întrebare despre Simplu? Contactați-ne direct</h1>
             </div>
 
             {/* Contact form */}
             <form className="max-w-xl mx-auto">
               <div className="flex flex-wrap -mx-3 mb-4">
                 <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
-                  <label className="block text-gray-800 text-sm font-medium mb-1" htmlFor="first-name">First Name <span className="text-red-600">*</span></label>
+                  <label className="block text-gray-800 text-sm font-medium mb-1" htmlFor="first-name">Prenume <span className="text-red-600">*</span></label>
                   <input id="first-name" type="text" className="form-input w-full text-gray-800" placeholder="Enter your first name" required />
                 </div>
                 <div className="w-full md:w-1/2 px-3">
-                  <label className="block text-gray-800 text-sm font-medium mb-1" htmlFor="last-name">Last Name <span className="text-red-600">*</span></label>
+                  <label className="block text-gray-800 text-sm font-medium mb-1" htmlFor="last-name">Nume <span className="text-red-600">*</span></label>
                   <input id="last-name" type="text" className="form-input w-full text-gray-800" placeholder="Enter your last name" required />
                 </div>
               </div>
@@ -147,34 +147,34 @@ export default function Support() {
               </div>
               <div className="flex flex-wrap -mx-3 mb-4">
                 <div className="w-full px-3">
-                  <label className="block text-gray-800 text-sm font-medium mb-1" htmlFor="subject">Subject <span className="text-red-600">*</span></label>
+                  <label className="block text-gray-800 text-sm font-medium mb-1" htmlFor="subject">Subiect <span className="text-red-600">*</span></label>
                   <input id="subject" type="text" className="form-input w-full text-gray-800" placeholder="How can we help you?" required />
                 </div>
               </div>
-              <div className="flex flex-wrap -mx-3 mb-4">
+              {/* <div className="flex flex-wrap -mx-3 mb-4">
                 <div className="w-full px-3">
-                  <label className="block text-gray-800 text-sm font-medium mb-1" htmlFor="country">Country</label>
+                  <label className="block text-gray-800 text-sm font-medium mb-1" htmlFor="country">Tara</label>
                   <select id="country" className="form-select w-full text-gray-500">
                     <option>United States</option>
                     <option>United Kingdom</option>
                     <option>Germany</option>
                   </select>
                 </div>
-              </div>
+              </div> */}
               <div className="flex flex-wrap -mx-3 mb-4">
                 <div className="w-full px-3">
-                  <label className="block text-gray-800 text-sm font-medium mb-1" htmlFor="message">Message</label>
+                  <label className="block text-gray-800 text-sm font-medium mb-1" htmlFor="message">Mesaj</label>
                   <textarea id="message" rows={4} className="form-textarea w-full text-gray-800" placeholder="Write your message"></textarea>
                 </div>
               </div>
               <div className="flex flex-wrap -mx-3 mt-4">
                 <div className="w-full px-3">
-                  <button className="btn text-white bg-blue-600 hover:bg-blue-700 w-full">Send</button>
+                  <button className="btn text-white bg-blue-600 hover:bg-blue-700 w-full">Trimite</button>
                 </div>
               </div>
-              <div className="text-sm text-gray-600 mt-4">
+              {/* <div className="text-sm text-gray-600 mt-4">
                 By clicking "send" you consent to allow Simple to store and process the personal information submitted above and agree to our <a className="underline" href="#0">terms and conditions</a> as well as our <a className="underline" href="#0">Privacy Policy</a>.
-              </div>
+              </div> */}
             </form>
 
           </div>

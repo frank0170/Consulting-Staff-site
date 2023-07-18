@@ -65,13 +65,13 @@ export default function MobileMenu() {
         >
           <ul className="px-5 py-2">
             <li>
-              <Link href="/pricing" className="flex text-gray-600 hover:text-gray-900 py-2" onClick={() => setMobileNavOpen(false)}>Proiecte Fonduri</Link>
+              <Link href="/proiecte" className="flex text-gray-600 hover:text-gray-900 py-2" onClick={() => setMobileNavOpen(false)}>Proiecte Fonduri</Link>
             </li>
             <li>
-              <Link href="/about" className="flex text-gray-600 hover:text-gray-900 py-2" onClick={() => setMobileNavOpen(false)}>Afaceri de Vanzare</Link>
+              <Link href="/afaceri" className="flex text-gray-600 hover:text-gray-900 py-2" onClick={() => setMobileNavOpen(false)}>Afaceri de Vanzare</Link>
             </li>
             <li>
-              <Link href="/tutorials" className="flex text-gray-600 hover:text-gray-900 py-2" onClick={() => setMobileNavOpen(false)}>Promovare Servicii</Link>
+              <Link href="/servicii" className="flex text-gray-600 hover:text-gray-900 py-2" onClick={() => setMobileNavOpen(false)}>Promovare Servicii</Link>
             </li>
             <li>
               <Link href="/blog" className="flex text-gray-600 hover:text-gray-900 py-2" onClick={() => setMobileNavOpen(false)}>Blog</Link>
@@ -80,10 +80,10 @@ export default function MobileMenu() {
               <span className="flex text-gray-600 hover:text-gray-900 py-2" onClick={() => setMobileNavOpen(false)}>Resurse</span>
               <ul className="pl-4">
                 <li>
-                  <Link href="/documentation" className="text-sm flex font-medium text-gray-600 hover:text-gray-900 py-2" onClick={() => setMobileNavOpen(false)}>Documentatie</Link>
+                  <Link href="/documentatie" className="text-sm flex font-medium text-gray-600 hover:text-gray-900 py-2" onClick={() => setMobileNavOpen(false)}>Documentatie</Link>
                 </li>
                 <li>
-                  <Link href="/support" className="text-sm flex font-medium text-gray-600 hover:text-gray-900 py-2" onClick={() => setMobileNavOpen(false)}>Support</Link>
+                  <Link href="/suport" className="text-sm flex font-medium text-gray-600 hover:text-gray-900 py-2" onClick={() => setMobileNavOpen(false)}>Support</Link>
                 </li>
                 {/* <li>
                   <Link href="/404" className="text-sm flex font-medium text-gray-600 hover:text-gray-900 py-2" onClick={() => setMobileNavOpen(false)}>404</Link>
