@@ -6,8 +6,9 @@ import TutorialImage03 from "@/public/images/tutorial-03.jpg";
 import TutorialImage04 from "@/public/images/tutorial-04.jpg";
 import CardArticle from "@/components/cardProiect";
 import React, { useState, useEffect } from 'react'
+import Link from "next/link";
 
-export default function TutorialsContent() {
+export default  function TutorialsContent() {
 
   const [post, setPost] = useState<any>([])
 
@@ -56,7 +57,9 @@ export default function TutorialsContent() {
 
   useEffect(() => {
     async function getProiecte() {
-      const response = await fetch("http://localhost:5080/proiecte");
+      const response = await fetch("http://localhost:5080/proiecte", 
+      {cache: 'no-store'}
+      );
 
       if (!response.ok) {
         const message = `An error occurred: ${response.statusText}`;
@@ -121,7 +124,7 @@ export default function TutorialsContent() {
               {post.map((card: any, index: any) => {
                 const imageSrc = typeof card.imagine === 'string' && card.imagine.trim() !== '' ? card.imagine : TutorialImage01;
                 return (
-                  <a href={`${'/'}${'proiecte'}${'/'}${card.titlu}`} key={index}>
+                  <Link href={`/proiecte/${card._id}`} key={index}>
                     <CardArticle
                       imagine={imageSrc}
                       titlu={card.titlu}
@@ -132,7 +135,7 @@ export default function TutorialsContent() {
                       proiect={card.proiect}
                       firma={card.firma}
                     />
-                  </a>
+                  </Link>
                 );
               })}
             </div>
