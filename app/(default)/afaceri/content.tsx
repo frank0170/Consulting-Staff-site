@@ -85,9 +85,9 @@ export default function TutorialsContent() {
                     <CardArticle
                       imagine={imageSrc}
                       titlu={card.titlu}
+                      intro={card.intro}
                       descriere={card.descriere}
                       locatie={card.locatie}
-                      proiect={card.proiect}
                       pret={card.pret}
                     />
                   </Link>
