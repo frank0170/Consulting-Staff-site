@@ -22,9 +22,7 @@ export const metadata = {
 export default async function TutorialsContent({ params }: any) {
   // const proiect: any = await getProiect(params._id);
 
-  const proiect = afacere1
-
-
+  const proiect = afacere1;
 
   // imagine: TutorialImage04,
   // titlu: "Proiect 4",
@@ -100,10 +98,8 @@ export default async function TutorialsContent({ params }: any) {
                     </div>
                   </div>
 
-
-
-                  <p className="text-orange-600 text-8x1">
-                    <b>Descrierea finantarii</b>
+                  <p className="text-orange-600 text-xl">
+                    <b className="text-orange-600 text-xl">Descrierea afacerii</b>
                   </p>
                   <br />
                   <p>{proiect.descriere}</p>
@@ -113,26 +109,25 @@ export default async function TutorialsContent({ params }: any) {
                   <div className="border-b border-gray-300 pb-4 mt-5 mb-5" />
 
                   <br />
-                  <p>
-                    {" "}
-                    <b>Date de Contact</b>
+                  <p className="text-orange-600 text-lg">
+                    <b >Date de Contact</b>
+                    </p>
                     <br />
-                    <br />
-                    <p>
+                    <p className="mb-2">
                       Nume: <b>Lelica Crisan</b>
                     </p>
-                    <p>
+                    <p className="mb-2">
                       Telefon:<b>0711111111</b>
                     </p>
-                    <p>
+                    <p className="mb-2">
                       Email: <b>consulting.staff@yahoo.com</b>
                     </p>
-                  </p>
+                  
                 </div>
               </div>
 
               {/* grid 2 */}
-<ContactForm firma={proiect.titlu}/>
+              <ContactForm firma={proiect.titlu} />
             </div>
           </div>
         </div>
