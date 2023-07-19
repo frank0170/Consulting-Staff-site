@@ -315,14 +315,14 @@ export default function Header() {
               {/* 1st level: hover */}
               <Dropdown title="Resurse">
                 {/* 2nd level: hover */}
-                <li>
+                {/* <li>
                   <Link
                     href="/documentatie"
                     className="font-medium text-sm text-gray-600 hover:text-gray-900 flex py-2 px-5 leading-tight"
                   >
                     Documentatie
                   </Link>
-                </li>
+                </li> */}
                 <li>
                 <Link
                     href="/proiecte-reusite"
@@ -336,7 +336,7 @@ export default function Header() {
                     href="/suport"
                     className="font-medium text-sm text-gray-600 hover:text-gray-900 flex py-2 px-5 leading-tight"
                   >
-                    Support center
+                    Suport
                   </Link>
                 </li>
                 {/* <li>

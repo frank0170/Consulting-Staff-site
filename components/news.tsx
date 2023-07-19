@@ -53,10 +53,10 @@ export default function News() {
                   <div className="mb-3">
                     <ul className="flex flex-wrap text-xs font-medium -m-1">
                       <li className="m-1">
-                        <a className="inline-flex text-center text-gray-100 py-1 px-3 rounded-full bg-orange-500 hover:bg-orange-600 transition duration-150 ease-in-out" href="#0">Case studies</a>
+                        <a className="inline-flex text-center text-gray-100 py-1 px-3 rounded-full bg-orange-500 hover:bg-orange-600 transition duration-150 ease-in-out" href="#0">StartUp</a>
                       </li>
                       <li className="m-1">
-                        <a className="inline-flex text-center text-gray-800 py-1 px-3 rounded-full bg-white hover:bg-gray-100 shadow-sm transition duration-150 ease-in-out" href="#0">Hubspot</a>
+                        <a className="inline-flex text-center text-gray-800 py-1 px-3 rounded-full bg-white hover:bg-gray-100 shadow-sm transition duration-150 ease-in-out" href="#0">Constructii</a>
                       </li>
                     </ul>
                   </div>
@@ -89,10 +89,10 @@ export default function News() {
                   <div className="mb-3">
                     <ul className="flex flex-wrap text-xs font-medium -m-1">
                       <li className="m-1">
-                        <a className="inline-flex text-center text-gray-100 py-1 px-3 rounded-full bg-orange-500 hover:bg-orange-600 transition duration-150 ease-in-out" href="#0">Case studies</a>
+                        <a className="inline-flex text-center text-gray-100 py-1 px-3 rounded-full bg-orange-500 hover:bg-orange-600 transition duration-150 ease-in-out" href="#0">StartUp</a>
                       </li>
                       <li className="m-1">
-                        <a className="inline-flex text-center text-gray-800 py-1 px-3 rounded-full bg-white hover:bg-gray-100 shadow-sm transition duration-150 ease-in-out" href="#0">Facebook</a>
+                        <a className="inline-flex text-center text-gray-800 py-1 px-3 rounded-full bg-white hover:bg-gray-100 shadow-sm transition duration-150 ease-in-out" href="#0">Catering</a>
                       </li>
                     </ul>
                   </div>
@@ -125,11 +125,11 @@ export default function News() {
                   <div className="mb-3">
                     <ul className="flex flex-wrap text-xs font-medium -m-1">
                       <li className="m-1">
-                        <a className="inline-flex text-center text-gray-100 py-1 px-3 rounded-full bg-orange-500 hover:bg-orange-600 transition duration-150 ease-in-out" href="#0">Case studies</a>
+                        <a className="inline-flex text-center text-gray-100 py-1 px-3 rounded-full bg-orange-500 hover:bg-orange-600 transition duration-150 ease-in-out" href="#0">StartUp</a>
                       </li>
-                      {/* <li className="m-1">
-                        <a className="inline-flex text-center text-gray-800 py-1 px-3 rounded-full bg-white hover:bg-gray-100 shadow-sm transition duration-150 ease-in-out" href="#0">Tinder</a>
-                      </li> */}
+                      <li className="m-1">
+                        <a className="inline-flex text-center text-gray-800 py-1 px-3 rounded-full bg-white hover:bg-gray-100 shadow-sm transition duration-150 ease-in-out" href="#0">Evenimete</a>
+                      </li>
                     </ul>
                   </div>
                   <h3 className="text-xl font-bold leading-snug tracking-tight">
