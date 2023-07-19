@@ -81,7 +81,7 @@ export default function TutorialsContent() {
               {post.map((card: any, index: any) => {
                 const imageSrc = typeof card.imagine === 'string' && card.imagine.trim() !== '' ? card.imagine : TutorialImage01;
                 return (
-                  <Link href={`/afaceri/${card._id}`} key={index}>
+                  <Link href={`/afaceri/1`} key={index}>
                     <CardArticle
                       imagine={imageSrc}
                       titlu={card.titlu}

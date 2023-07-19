@@ -1,6 +1,7 @@
 import TutorialImage01 from "@/public/images/tutorial-01.jpg";
 import Image from "next/image";
 import ContactForm from "./contactForm";
+import { afacere1 } from "@/content/afaceri";
 
 export const metadata = {
   title: "Afaceri",
@@ -19,7 +20,9 @@ async function getProiect(id: any) {
 }
 
 export default async function TutorialsContent({ params }: any) {
-  const proiect: any = await getProiect(params._id);
+  // const proiect: any = await getProiect(params._id);
+
+  const proiect = afacere1
 
   console.log("proiect", proiect);
 
