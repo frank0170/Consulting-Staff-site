@@ -8,16 +8,16 @@ export const metadata = {
   description: "Page description",
 };
 
-async function getProiect(id: any) {
-  const res = await fetch(`http://localhost:5080/afaceri/${id}`, {
-    cache: "no-store",
-  });
-  const data = await res.json();
+// async function getProiect(id: any) {
+//   const res = await fetch(`http://localhost:5080/afaceri/${id}`, {
+//     cache: "no-store",
+//   });
+//   const data = await res.json();
 
-  // console.log('data', data)
-  // console.log('id', id)
-  return data;
-}
+//   // console.log('data', data)
+//   // console.log('id', id)
+//   return data;
+// }
 
 export default async function TutorialsContent({ params }: any) {
   // const proiect: any = await getProiect(params._id);
