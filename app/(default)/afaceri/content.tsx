@@ -16,7 +16,7 @@ export default function TutorialsContent() {
 
   useEffect(() => {
     async function getProiecte() {
-      const response = await fetch("https://consulting-staff-app-754757bb2499.herokuapp.com/afaceri");
+      const response = await fetch("http://localhost:5080/afaceri");
 
       if (!response.ok) {
         const message = `An error occurred: ${response.statusText}`;
