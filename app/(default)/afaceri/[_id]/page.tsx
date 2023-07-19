@@ -24,7 +24,7 @@ export default async function TutorialsContent({ params }: any) {
 
   const proiect = afacere1
 
-  console.log("proiect", proiect);
+
 
   // imagine: TutorialImage04,
   // titlu: "Proiect 4",
@@ -65,7 +65,7 @@ export default async function TutorialsContent({ params }: any) {
                   </div>
                   <br />
 
-                  <div className="border border-gray-300 p-4 mt-1 mb-5 flex flex-row justify-around items-center">
+                  <div className="border border-gray-300 p-4 mt-1 mb-5 flex flex-row justify-around items-center rounded-lg">
                     <div className="flex flex-col items-center justify-center">
                       <p>Localitate</p>
                       <p>
@@ -86,13 +86,21 @@ export default async function TutorialsContent({ params }: any) {
                       </p>
                     </div>
 
-                    <div className="flex flex-col items-center justify-center">
+                    {/* <div className="flex flex-col items-center justify-center">
                       <p>Cod Caen</p>
                       <p>
                         <b>{proiect.caen}</b>
                       </p>
+                    </div> */}
+                    <div className="flex flex-col items-center justify-center">
+                      <p>CUI</p>
+                      <p>
+                        <b>{proiect.cui}</b>
+                      </p>
                     </div>
                   </div>
+
+
 
                   <p className="text-orange-600 text-8x1">
                     <b>Descrierea finantarii</b>
