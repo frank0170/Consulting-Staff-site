@@ -63,23 +63,23 @@ export default async function TutorialsContent({ params }: any) {
                   </div>
                   <br />
 
-                  <div className="border border-gray-300 p-4 mt-1 mb-5 flex flex-row justify-around items-center rounded-lg">
+                  <div className="border border-gray-300 p-4 mt-1 mb-5 flex flex-row justify-around items-center rounded-lg flex-wrap gap-5">
                     <div className="flex flex-col items-center justify-center">
-                      <p>Localitate</p>
-                      <p>
+                      <p className="sm:text-sm">Localitate</p>
+                      <p className="sm:text-sm">
                         <b>{proiect.locatie}</b>
                       </p>
                     </div>
                     <div className="flex flex-col items-center justify-center">
-                      <p>Vechime</p>
-                      <p>
+                      <p className="sm:text-sm">Vechime</p>
+                      <p className="sm:text-sm">
                         <b>{proiect.vechime}</b>
                       </p>
                     </div>
 
                     <div className="flex flex-col items-center justify-center">
-                      <p>Pret</p>
-                      <p>
+                      <p className="sm:text-sm">Pret</p>
+                      <p className="sm:text-sm">
                         <b>{proiect.pret}</b>
                       </p>
                     </div>
@@ -90,9 +90,9 @@ export default async function TutorialsContent({ params }: any) {
                         <b>{proiect.caen}</b>
                       </p>
                     </div> */}
-                    <div className="flex flex-col items-center justify-center">
-                      <p>CUI</p>
-                      <p>
+                    <div className="flex flex-col items-center justify-center sm:align-start sm:item-start">
+                      <p className="sm:text-sm">CUI</p>
+                      <p className=" text-base sm:text-sm">
                         <b>{proiect.cui}</b>
                       </p>
                     </div>
