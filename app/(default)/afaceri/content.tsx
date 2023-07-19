@@ -6,6 +6,7 @@ import TutorialImage03 from "@/public/images/tutorial-03.jpg";
 import TutorialImage04 from "@/public/images/tutorial-04.jpg";
 import CardArticle from "@/components/cardAfaceri";
 import Link from "next/link";
+import { afacere1array } from "@/content/afaceri";
 
 
 import React, {useState, useEffect} from "react";
@@ -14,23 +15,25 @@ export default function TutorialsContent() {
 
   const [post, setPost] = useState<any>([])
 
-  useEffect(() => {
-    async function getProiecte() {
-      const response = await fetch("http://localhost:5080/afaceri");
+  // useEffect(() => {
+  //   async function getProiecte() {
+  //     const response = await fetch("http://localhost:5080/afaceri");
 
-      if (!response.ok) {
-        const message = `An error occurred: ${response.statusText}`;
-        window.alert(message);
-        return;
-      }
+  //     if (!response.ok) {
+  //       const message = `An error occurred: ${response.statusText}`;
+  //       window.alert(message);
+  //       return;
+  //     }
 
-      const records = await response.json();
-      console.log(records)
-      setPost(records);
-    }
+  //     const records = await response.json();
+  //     console.log(records)
+  //     setPost(records);
+  //   }
 
-    getProiecte();
-  }, []);
+  //   getProiecte();
+  // }, []);
+
+setPost(afacere1array)
 
   return (
     <section className="relative">
