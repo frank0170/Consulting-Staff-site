@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
    
-  export default function CardArticle({imagine, titlu, descriere, pret, proiect, locatie}: any) {
+  export default function CardArticle({imagine, titlu, intro, pret, vechime, locatie, cui}: any) {
     return (
     <article className="flex flex-col h-full shadow-lg rounded-xl p-2" data-aos="zoom-y-out">
 <header>
@@ -16,10 +16,10 @@ import Image from 'next/image'
   <div className="mb-3">
     <ul className="flex flex-wrap text-xs font-medium -m-1">
       <li className="m-1">
-        <a className="inline-flex text-center text-gray-100 py-1 px-3 rounded-full bg-orange-500 hover:bg-blue-600 transition duration-150 ease-in-out" href="#0">{proiect}</a>
+        <a className="inline-flex text-center text-gray-100 py-1 px-3 rounded-full bg-orange-500 hover:bg-blue-600 transition duration-150 ease-in-out" href="#0">{vechime}</a>
       </li>
       <li className="m-1">
-        <a className="inline-flex text-center text-gray-800 py-1 px-3 rounded-full bg-orange-100 hover:bg-blue-200 transition duration-150 ease-in-out" href="#0">proiect</a>
+        <a className="inline-flex text-center text-gray-800 py-1 px-3 rounded-full bg-orange-100 hover:bg-blue-200 transition duration-150 ease-in-out" href="#0">{cui}</a>
       </li>
       {/* <li className="m-1">
         <span className="inline-flex text-center text-gray-800 py-1 px-3 rounded-full bg-white shadow-sm">4 min read</span>
@@ -30,9 +30,9 @@ import Image from 'next/image'
     <p>{titlu}</p>
   </h3>
 </header>
-<p className="text-gray-600 grow">{descriere}</p>
+<p className="text-gray-600 grow mt-1">{intro}</p>
 
-<p className="text-orange-600 grow mt-2 mb-1"><b>{pret}</b></p>
+<p className="text-orange-600 grow mt-4 mb-1"><b>{pret}</b></p>
 <div className="border-b border-gray-300 pb-1 mb-1"/>
 
 

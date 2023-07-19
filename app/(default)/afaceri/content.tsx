@@ -1,6 +1,6 @@
 'use client'
 
-import TutorialImage01 from "@/public/images/tutorial-01.jpg";
+import TutorialImage01 from "@/public/images/consult-main.jpg";
 import TutorialImage02 from "@/public/images/tutorial-02.jpg";
 import TutorialImage03 from "@/public/images/tutorial-03.jpg";
 import TutorialImage04 from "@/public/images/tutorial-04.jpg";
@@ -71,6 +71,8 @@ export default function TutorialsContent() {
                       descriere={card.descriere}
                       locatie={card.locatie}
                       pret={card.pret}
+                      vechime={card.vechime}
+                      cui={card.cui}
                     />
                   </Link>
                 );

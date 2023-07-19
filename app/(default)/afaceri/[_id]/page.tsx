@@ -1,4 +1,4 @@
-import TutorialImage01 from "@/public/images/tutorial-01.jpg";
+import TutorialImage01 from "@/public/images/consult-main.jpg";
 import Image from "next/image";
 import ContactForm from "./contactForm";
 import { afacere1 } from "@/content/afaceri";
@@ -97,6 +97,7 @@ export default async function TutorialsContent({ params }: any) {
                       </p>
                     </div>
                   </div>
+                  <br/>
 
                   <p className="text-orange-600 text-xl">
                     <b className="text-orange-600 text-xl">Descrierea afacerii</b>
