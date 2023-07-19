@@ -8,7 +8,7 @@ import CardArticle from "@/components/cardProiect";
 import React, { useState, useEffect } from 'react'
 import Link from "next/link";
 
-export default  function TutorialsContent() {
+export default function TutorialsContent() {
 
   const [post, setPost] = useState<any>([])
 
@@ -57,7 +57,7 @@ export default  function TutorialsContent() {
 
   useEffect(() => {
     async function getProiecte() {
-      const response = await fetch("http://localhost:5080/proiecte", 
+      const response = await fetch("https://consulting-staff-app-754757bb2499.herokuapp.com/proiecte", 
       {cache: 'no-store'}
       );
 
@@ -78,9 +78,9 @@ export default  function TutorialsContent() {
   return (
     <section className="relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="pt-20 pb-12 md:pt-40 md:pb-20">
+        <div className="pt-28 pb-12 md:pt-28 md:pb-20">
           {/* Page header */}
-          <div className="max-w-3xl pb-12 md:pb-20 text-center md:text-left">
+          <div className="max-w-3xl pb-5 md:pb-50 text-center md:text-left">
             <h1 className="h1">Proiecte Fonduri</h1>
             <p className="text-xl text-gray-600">Fonduri nerambursabile pentru intreprinderi</p>
 

@@ -1,14 +1,14 @@
 import TutorialImage01 from "@/public/images/tutorial-01.jpg";
 import Image from "next/image";
 
+
 export const metadata = {
-    title: 'Proiecte',
-    description: 'Page description',
-  }
+  title: 'Servicii',
+  description: 'Page description',
+}
 
 async function getProiect(id: any) {
-  const res = await fetch(`http://localhost:5080/proiecte/${id}`,
-  {cache: 'no-store'});
+  const res = await fetch(`http://localhost:5080/servicii/${id}`);
   const data = await res.json();
 
   // console.log('data', data)
@@ -85,14 +85,14 @@ export default async function TutorialsContent({ params }: any) {
                     {" "}
                     <b>Valoarea finantarii</b>
                   </p>
-                  <p>Valoarea minima a finantarii: {proiect?.finantareMin}</p>
-                  <p>Valoarea maxima a finantarii: {proiect?.finantareMax}</p>
+                  <p>Valoarea minima a finantarii: {proiect?.finantare?.min}</p>
+                  <p>Valoarea maxima a finantarii: {proiect?.finantare?.max}</p>
                   <br />
                   <p>
                     Cuantum finantarii acordate:{" "}
-                    {100 - Number(proiect.finantareCo)}%
+                    {100 - Number(proiect.finantare)}%
                   </p>
-                  <p>Cofinantare: {proiect.finantareCo}%</p>
+                  <p>Cofinantare: {proiect.finantare}%</p>
                   <br />
                   <p>
                     {" "}
@@ -131,7 +131,7 @@ export default async function TutorialsContent({ params }: any) {
               {/* grid 2 */}
               <div className="md:col-span-1 ml-3">
                 <div className="pt-5 flex justify-end">
-                  <a href="/proiecte" className="btn text-orange-600 border border-orange-600 hidden md:block">
+                  <a href="/servicii" className="btn text-orange-600 border border-orange-600 hidden md:block">
                     Inapoi
                   </a>
                 </div>
