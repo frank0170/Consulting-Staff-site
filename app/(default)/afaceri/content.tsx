@@ -11,7 +11,7 @@ import { afacere1array } from "@/content/afaceri";
 
 import React, {useState, useEffect} from "react";
 
-export default function TutorialsContent() {
+export default function TutorialsContent({data}: any) {
 
 
   return (
@@ -20,7 +20,7 @@ export default function TutorialsContent() {
         <div className="pt-28 pb-12 md:pt-28 md:pb-20">
           {/* Page header */}
           <div className="max-w-3xl pb-5 md:pb-50 text-center md:text-left">
-            <h1 className="h1">Afaceri de Vanzare</h1>
+            <h1 className="h1">Afaceri de Vanzare </h1>
             <p className="text-xl text-gray-600">Caută o afacere cu potențial de dezvoltare</p>
 
           </div>

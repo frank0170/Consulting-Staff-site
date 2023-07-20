@@ -5,8 +5,22 @@ export const metadata = {
 
 import Content from './content'
 import Newsletter from '@/components/newsletter'
+import connectDb from '@/components/utils/cacheddb';
 
-export default function Tutorials() {
+async function fetchData() {
+  try {
+    const db = await connectDb();
+    const collectionName = "Afaceri";
+    const collection = db.collection(collectionName);
+    const results = await collection.find({}).toArray();
+    console.log(results);
+  } catch (error) {
+    console.error("Error fetching data from MongoDB:", error);
+  }
+}
+
+export default async function  Tutorials() {
+  const data = await fetchData()
   return (
     <>
       <Content />

@@ -2,36 +2,31 @@ import TutorialImage01 from "@/public/images/consult-main.jpg";
 import Image from "next/image";
 import ContactForm from "./contactForm";
 import { afacere1 } from "@/content/afaceri";
+import connectDb from "@/components/utils/cacheddb";
 
 export const metadata = {
   title: "Afaceri",
   description: "Page description",
 };
 
-// async function getProiect(id: any) {
-//   const res = await fetch(`http://localhost:5080/afaceri/${id}`, {
-//     cache: "no-store",
-//   });
-//   const data = await res.json();
-
-//   // console.log('data', data)
-//   // console.log('id', id)
-//   return data;
-// }
+async function fetchData() {
+  try {
+    const db = await connectDb();
+    const collectionName = "Afaceri";
+    const collection = db.collection(collectionName);
+    const results = await collection.find({}).toArray();
+    console.log(results);
+  } catch (error) {
+    console.error("Error fetching data from MongoDB:", error);
+  }
+}
 
 export default async function TutorialsContent({ params }: any) {
   // const proiect: any = await getProiect(params._id);
 
-  const proiect = afacere1;
+  fetchData();
 
-  // imagine: TutorialImage04,
-  // titlu: "Proiect 4",
-  // beneficiari: "1",
-  // valoare: "50-100",
-  // cofinantare: "10%",
-  // locatie: " vest",
-  // proiect: "PNRR",
-  // firma: "tractor",
+  const proiect = afacere1;
 
   return (
     <div>
@@ -97,10 +92,12 @@ export default async function TutorialsContent({ params }: any) {
                       </p>
                     </div>
                   </div>
-                  <br/>
+                  <br />
 
                   <p className="text-orange-600 text-xl">
-                    <b className="text-orange-600 text-xl">Descrierea afacerii</b>
+                    <b className="text-orange-600 text-xl">
+                      Descrierea afacerii
+                    </b>
                   </p>
                   <br />
                   <p>{proiect.descriere}</p>
@@ -111,19 +108,18 @@ export default async function TutorialsContent({ params }: any) {
 
                   <br />
                   <p className="text-orange-600 text-lg">
-                    <b >Date de Contact</b>
-                    </p>
-                    <br />
-                    <p className="mb-2">
-                      Nume: <b>Lelica Crisan</b>
-                    </p>
-                    <p className="mb-2">
-                      Telefon:<b>0711111111</b>
-                    </p>
-                    <p className="mb-2">
-                      Email: <b>consulting.staff@yahoo.com</b>
-                    </p>
-                  
+                    <b>Date de Contact</b>
+                  </p>
+                  <br />
+                  <p className="mb-2">
+                    Nume: <b>Lelica Crisan</b>
+                  </p>
+                  <p className="mb-2">
+                    Telefon:<b>0711111111</b>
+                  </p>
+                  <p className="mb-2">
+                    Email: <b>consulting.staff@yahoo.com</b>
+                  </p>
                 </div>
               </div>
 
