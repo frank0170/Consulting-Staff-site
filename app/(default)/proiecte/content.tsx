@@ -7,6 +7,8 @@ import TutorialImage04 from "@/public/images/tutorial-04.jpg";
 import CardArticle from "@/components/cardProiect";
 import React, { useState, useEffect } from 'react'
 import Link from "next/link";
+import { proiecte } from "@/content/proiecte";
+
 
 export default function TutorialsContent() {
 
@@ -121,14 +123,15 @@ export default function TutorialsContent() {
           <div className="max-w-sm mx-auto md:max-w-none">
             {/* Articles container */}
             <div className="grid gap-12 md:grid-cols-3 md:gap-x-6 md:gap-y-8 items-start">
-              {post.map((card: any, index: any) => {
+              {proiecte.map((card: any, index: any) => {
                 const imageSrc = typeof card.imagine === 'string' && card.imagine.trim() !== '' ? card.imagine : TutorialImage01;
                 return (
                   <Link href={`/proiecte/${card._id}`} key={index}>
                     <CardArticle
                       imagine={imageSrc}
                       titlu={card.titlu}
-                      beneficiari={card.beneficiari}
+                      intro={card.intro}
+                      beneficiariIntro={card.beneficiariIntro}
                       valoare={card.valoare}
                       cofinantare={card.cofinantare}
                       locatie={card.locatie}

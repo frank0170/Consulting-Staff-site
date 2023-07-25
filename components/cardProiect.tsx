@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import TutorialImage01 from "@/public/images/tutorial-01.jpg";
    
-  export default function CardArticle({imagine, titlu, beneficiari, valoare, cofinantare, locatie, proiect, firma}: any) {
+  export default function CardArticle({imagine, titlu, intro, beneficiariIntro, valoare, cofinantare, locatie, proiect, firma}: any) {
     return (
     <article className="flex flex-col h-full shadow-lg rounded-xl" data-aos="zoom-y-out">
 <header>
@@ -25,11 +25,13 @@ import TutorialImage01 from "@/public/images/tutorial-01.jpg";
       </li> */}
     </ul>
   </div>
-  <h3 className="text-xl font-bold leading-snug tracking-tight mb-2">
+  <h3 className="text-xl font-bold leading-snug tracking-tight">
     <p>{titlu}</p>
   </h3>
+  <p className="text-gray-600">{intro}</p>
 </header>
-<p className="text-gray-600 grow"><b>Beneficiari:</b> {beneficiari}</p>
+<br/>
+<p className="text-gray-600 grow"><b>Beneficiari:</b> {beneficiariIntro}</p>
 <p className="text-gray-600 grow"><b>Valoare:</b> {valoare}</p>
 <p className="text-gray-600 grow"><b>Cofinantare:</b> {cofinantare}</p>
 <p className="text-gray-600 grow"><b>Locatie:</b> {locatie}</p>

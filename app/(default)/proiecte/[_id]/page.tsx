@@ -1,25 +1,28 @@
 import TutorialImage01 from "@/public/images/tutorial-01.jpg";
 import Image from "next/image";
+import { proiecte } from "@/content/proiecte";
 
 export const metadata = {
     title: 'Proiecte',
     description: 'Page description',
   }
 
-async function getProiect(id: any) {
-  const res = await fetch(`http://localhost:5080/proiecte/${id}`,
-  {cache: 'no-store'});
-  const data = await res.json();
+// async function getProiect(id: any) {
+//   const res = await fetch(`http://localhost:5080/proiecte/${id}`,
+//   {cache: 'no-store'});
+//   const data = await res.json();
 
-  // console.log('data', data)
-  // console.log('id', id)
-  return data;
-}
+//   // console.log('data', data)
+//   // console.log('id', id)
+//   return data;
+// }
 
-export default async function TutorialsContent({ params }: any) {
-  const proiect: any = await getProiect(params._id);
+export default async function TutorialsContent() {
+  // const proiect: any = await getProiect(params._id);
 
-  console.log("proiect", proiect);
+  // console.log("proiect", proiect);
+
+  const proiect: any = proiecte[0]
 
   // imagine: TutorialImage04,
   // titlu: "Proiect 4",
@@ -44,7 +47,7 @@ export default async function TutorialsContent({ params }: any) {
                 <div className="max-w-3xl pb-5 md:pb-5 text-center md:text-left">
                   <h1 className="h1">{proiect.titlu}</h1>
 
-                  <p className="text-xl text-gray-600">{proiect.descriere}</p>
+                  <p className="text-xl text-gray-600">{proiect.intro}</p>
                   <br />
 
                   <div className="block mb-6" suppressHydrationWarning>
@@ -71,14 +74,14 @@ export default async function TutorialsContent({ params }: any) {
                     {" "}
                     <b>Beneficiari eligibili</b>
                   </p>
-                  <p>{proiect.descriere}</p>
+                  <p>{proiect.beneficiari}</p>
 
                   <br />
                   <p>
                     {" "}
                     <b>Locatie implementare</b>
                   </p>
-                  <p>{proiect.locatie}</p>
+                  <p>{proiect.locatieDesc}</p>
 
                   <br />
                   <p>
@@ -105,7 +108,7 @@ export default async function TutorialsContent({ params }: any) {
                     {" "}
                     <b>Categorii de cheltuieli eligibile</b>
                   </p>
-                  <p>{proiect.eligibilitate}</p>
+                  <p>{proiect.cheltuieliEligibile}</p>
 
                   <div className="border-b border-gray-300 pb-4 mt-5 mb-5" />
 
@@ -138,7 +141,7 @@ export default async function TutorialsContent({ params }: any) {
                 <br />
                 <div className="border border-gray-300 pb-4 mt-1 mb-5 flex flex-col justify-center items-center">
                     <br/>
-                  <p>Suna un Consultant</p>
+                  {/* <p>Suna un Consultant</p>
                   <br />
                   <p>
                     <b>07111111111</b>
@@ -146,7 +149,7 @@ export default async function TutorialsContent({ params }: any) {
                   <br />
                   <div className="border-b border-gray-300 " />
                   <p>Apasa aici</p>
-                  <br />
+                  <br /> */}
                   Esti interesat de aceasta finantare?
                   <br />
                   <br />
