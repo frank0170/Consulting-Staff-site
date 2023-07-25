@@ -57,25 +57,25 @@ export default function TutorialsContent() {
     },
   ];
 
-  useEffect(() => {
-    async function getProiecte() {
-      const response = await fetch("https://consulting-staff-app-754757bb2499.herokuapp.com/proiecte", 
-      {cache: 'no-store'}
-      );
+  // useEffect(() => {
+  //   async function getProiecte() {
+  //     const response = await fetch("https://consulting-staff-app-754757bb2499.herokuapp.com/proiecte", 
+  //     {cache: 'no-store'}
+  //     );
 
-      if (!response.ok) {
-        const message = `An error occurred: ${response.statusText}`;
-        window.alert(message);
-        return;
-      }
+  //     if (!response.ok) {
+  //       const message = `An error occurred: ${response.statusText}`;
+  //       window.alert(message);
+  //       return;
+  //     }
 
-      const records = await response.json();
-      console.log(records)
-      setPost(records);
-    }
+  //     const records = await response.json();
+  //     console.log(records)
+  //     setPost(records);
+  //   }
 
-    getProiecte();
-  }, []);
+  //   getProiecte();
+  // }, []);
 
   return (
     <section className="relative">
@@ -126,7 +126,7 @@ export default function TutorialsContent() {
               {proiecte.map((card: any, index: any) => {
                 const imageSrc = typeof card.imagine === 'string' && card.imagine.trim() !== '' ? card.imagine : TutorialImage01;
                 return (
-                  <Link href={`/proiecte/${card._id}`} key={index}>
+                  <Link href={`/proiecte/proiectCentru`} key={index}>
                     <CardArticle
                       imagine={imageSrc}
                       titlu={card.titlu}

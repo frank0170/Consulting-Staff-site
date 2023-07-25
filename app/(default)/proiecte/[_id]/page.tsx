@@ -1,6 +1,7 @@
 import TutorialImage01 from "@/public/images/tutorial-01.jpg";
 import Image from "next/image";
 import { proiecte } from "@/content/proiecte";
+import ContactForm from "./contactForm";
 
 export const metadata = {
     title: 'Proiecte',
@@ -45,7 +46,7 @@ export default async function TutorialsContent() {
                 {/* grid 1 */}
 
                 <div className="max-w-3xl pb-5 md:pb-5 text-center md:text-left">
-                  <h1 className="h1">{proiect.titlu}</h1>
+                  <h1 className="h2 mt-10">{proiect.titlu}</h1>
 
                   <p className="text-xl text-gray-600">{proiect.intro}</p>
                   <br />
@@ -139,56 +140,7 @@ export default async function TutorialsContent() {
                   </a>
                 </div>
                 <br />
-                <div className="border border-gray-300 pb-4 mt-1 mb-5 flex flex-col justify-center items-center">
-                    <br/>
-                  {/* <p>Suna un Consultant</p>
-                  <br />
-                  <p>
-                    <b>07111111111</b>
-                  </p>
-                  <br />
-                  <div className="border-b border-gray-300 " />
-                  <p>Apasa aici</p>
-                  <br /> */}
-                  Esti interesat de aceasta finantare?
-                  <br />
-                  <br />
-                  <input
-                    type="text"
-                    placeholder="Nume"
-                    className="rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:border-blue-500 mb-3"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Email"
-                    className="rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:border-blue-500 mb-3"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Telefon"
-                    className="rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:border-blue-500 mb-3"
-                  />
-                  <input
-                    type="text"
-                    placeholder="CUI"
-                    className="rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:border-blue-500 mb-3"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Nume Companie"
-                    className="rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:border-blue-500 mb-3"
-                  />
-                  <textarea
-                    placeholder="Mesaj"
-                    className="rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:border-blue-500 mb-3"
-                  />
-                  <a
-                    className="btn text-white bg-orange-600"
-                    href="mailto:consulting.staff@yahoo.com"
-                  >
-                    Contact
-                  </a>
-                </div>
+                <ContactForm firma={proiect.titlu}/>
               </div>
             </div>
           </div>

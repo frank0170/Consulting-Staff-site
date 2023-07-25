@@ -1,7 +1,7 @@
 export const proiecte = [
   {
     imagine: "",
-    titlu: "Programul Regiunea Centru   2021-2027",
+    titlu: "Programul Regiunea Centru 2021-2027",
     intro: `25.000 – 200.000 euro - Scale up pentru start-up-uri și microîntreprinder`,
     descriere:`Întreprinderile trebuie să fie non agricole din mediul urban si au înregistrat/ înregistrează inclusiv la data acordării ajutorului un număr mediu de salariați de cel puțin 1.
     Tipul de cheltuieli eligibile sunt lucrări de construire, extindere, spatii de productie/prestare de servicii; echipamente, dotări, active corporale; servicii; cheltuieli cu active necorporale brevete, licenţe, mărci comerciale, programe informatice, alte drepturi şi active similare.
