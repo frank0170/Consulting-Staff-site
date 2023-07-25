@@ -7,8 +7,7 @@ export const proiecte = [
     Tipul de cheltuieli eligibile sunt lucrări de construire, extindere, spatii de productie/prestare de servicii; echipamente, dotări, active corporale; servicii; cheltuieli cu active necorporale brevete, licenţe, mărci comerciale, programe informatice, alte drepturi şi active similare.
    `,
     beneficiariIntro: "Microîntreprinderi",
-    beneficiari:
-      "Microîntreprinderi, inclusiv microîntreprinderi nou înființate sub formă de start-up-uri, care își desfășoară activitatea în mediul urban",
+    beneficiari: "Microîntreprinderi, inclusiv microîntreprinderi nou înființate sub formă de start-up-uri, care își desfășoară activitatea în mediul urban",
     valoare: "25.000 - 200.000 euro",
     finantareMin: "25.000 Euro",
     finantareMax: "200.000 Euro",

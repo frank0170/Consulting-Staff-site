@@ -4,9 +4,9 @@ import { proiecte } from "@/content/proiecte";
 import ContactForm from "./contactForm";
 
 export const metadata = {
-    title: 'Proiecte',
-    description: 'Page description',
-  }
+  title: "Proiecte",
+  description: "Page description",
+};
 
 // async function getProiect(id: any) {
 //   const res = await fetch(`http://localhost:5080/proiecte/${id}`,
@@ -23,7 +23,7 @@ export default async function TutorialsContent() {
 
   // console.log("proiect", proiect);
 
-  const proiect: any = proiecte[0]
+  const proiect: any = proiecte[0];
 
   // imagine: TutorialImage04,
   // titlu: "Proiect 4",
@@ -63,7 +63,7 @@ export default async function TutorialsContent() {
                     </figure>
                   </div>
                   <br />
-                  <p>
+                  <p className="mb-2">
                     {" "}
                     <b>Descrierea finantarii</b>
                   </p>
@@ -71,21 +71,21 @@ export default async function TutorialsContent() {
 
                   <br />
 
-                  <p>
+                  <p className="mb-2">
                     {" "}
                     <b>Beneficiari eligibili</b>
                   </p>
                   <p>{proiect.beneficiari}</p>
 
                   <br />
-                  <p>
+                  <p className="mb-2">
                     {" "}
                     <b>Locatie implementare</b>
                   </p>
                   <p>{proiect.locatieDesc}</p>
 
                   <br />
-                  <p>
+                  <p className="mb-2">
                     {" "}
                     <b>Valoarea finantarii</b>
                   </p>
@@ -98,18 +98,32 @@ export default async function TutorialsContent() {
                   </p>
                   <p>Cofinantare: {proiect.finantareCo}%</p>
                   <br />
-                  <p>
+                  <p className="mb-2">
                     {" "}
                     <b>Conditii de eligibilitate</b>
                   </p>
-                  <p>{proiect.eligibilitate}</p>
-
-                  <br />
                   <p>
                     {" "}
-                    <b>Categorii de cheltuieli eligibile</b>
+                    {proiect.eligibilitate
+                      .split("\n")
+                      .map((item: any, index: any) => (
+                        <p key={index}>{item}</p>
+                      ))}
                   </p>
-                  <p>{proiect.cheltuieliEligibile}</p>
+
+                  <br />
+                  <p className="mb-2">
+                    {" "}
+                    <b >Categorii de cheltuieli eligibile</b>
+                  </p>
+                  <p>
+                    {" "}
+                    {proiect.cheltuieliEligibile
+                      .split("\n")
+                      .map((item: any, index: any) => (
+                        <p key={index}>{item}</p>
+                      ))}
+                  </p>
 
                   <div className="border-b border-gray-300 pb-4 mt-5 mb-5" />
 
@@ -135,12 +149,15 @@ export default async function TutorialsContent() {
               {/* grid 2 */}
               <div className="md:col-span-1 ml-3">
                 <div className="pt-5 flex justify-end">
-                  <a href="/proiecte" className="btn text-orange-600 border border-orange-600 hidden md:block">
+                  <a
+                    href="/proiecte"
+                    className="btn text-orange-600 border border-orange-600 hidden md:block"
+                  >
                     Inapoi
                   </a>
                 </div>
                 <br />
-                <ContactForm firma={proiect.titlu}/>
+                <ContactForm firma={proiect.titlu} />
               </div>
             </div>
           </div>
