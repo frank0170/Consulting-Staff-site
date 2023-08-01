@@ -1,4 +1,4 @@
-import TutorialImage01 from "@/public/images/tutorial-01.jpg";
+import TutorialImage01 from "@/public/images/group-1.png";
 import Image from "next/image";
 import { proiecte } from "@/content/proiecte";
 import ContactForm from "./contactForm";
