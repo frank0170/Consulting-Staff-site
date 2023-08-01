@@ -18,7 +18,7 @@ export default function Cta() {
               {/* CTA button */}
               <div>
               
-                <a className="btn text-orange-600 bg-gradient-to-r from-blue-100 to-white" href="mailto:consulting.staff@yahoo.com">Contact</a>
+                <a className="btn text-orange-600 bg-gradient-to-r from-blue-100 to-white" href="/signup">Contact</a>
               </div>
 
             </div>

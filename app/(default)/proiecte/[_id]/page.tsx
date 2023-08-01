@@ -128,21 +128,24 @@ export default async function TutorialsContent() {
                   <div className="border-b border-gray-300 pb-4 mt-5 mb-5" />
 
                   <br />
-                  <p>
+                  <div>
                     {" "}
-                    <b>Date de Contact</b>
+                    <b style={{fontSize: '25px'}}>Date de Contact</b>
                     <br />
                     <br />
-                    <p>
-                      Nume: <b>Lelica Crisan</b>
+                    <p style={{fontSize: '22px'}}>
+                      Nume:  <b className="text-orange-700">Lelica Crisan</b>
                     </p>
-                    <p>
-                      Telefon:<b>0711111111</b>
+                    <br/>
+                    <p style={{fontSize: '22px'}}>
+                      Telefon:  <b className="text-orange-700">0744 506 685</b>
                     </p>
-                    <p>
-                      Email: <b>consulting.staff@yahoo.com</b>
+                    <br/>
+
+                    <p style={{fontSize: '22px'}}>
+                      Email: <b className="text-orange-700">consulting.staff@yahoo.com</b>
                     </p>
-                  </p>
+                  </div>
                 </div>
               </div>
 

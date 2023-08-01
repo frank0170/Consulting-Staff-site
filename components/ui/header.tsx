@@ -331,14 +331,14 @@ export default function Header() {
                     Proiecte Reusite
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link
                     href="/suport"
                     className="font-medium text-sm text-gray-600 hover:text-gray-900 flex py-2 px-5 leading-tight"
                   >
                     Suport
                   </Link>
-                </li>
+                </li> */}
                 {/* <li>
                   <Link
                     href="/404"
@@ -360,7 +360,7 @@ export default function Header() {
                   href="/signup"
                   className="btn-sm text-gray-200 bg-gray-900 hover:bg-gray-800 ml-3"
                 >
-                  <span>Adauga anunt</span>
+                  <span>Contacteaza-ne</span>
                   <svg
                     className="w-3 h-3 fill-current text-gray-400 shrink-0 ml-2 -mr-1"
                     viewBox="0 0 12 12"
