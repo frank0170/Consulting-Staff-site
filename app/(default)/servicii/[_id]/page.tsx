@@ -3,6 +3,11 @@ import Image from "next/image";
 import { servicii } from "@/content/servicii";
 import ContactForm from "./contactForm";
 
+export const metadata = {
+  title: 'Servicii',
+  description: 'Page description',
+}
+
 // export const metadata = {
 //   title: 'Servicii',
 //   description: 'Page description',
