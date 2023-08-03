@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import TutorialImage01 from "@/public/images/tutorial-01.jpg";
 import TutorialImage02 from "@/public/images/tutorial-02.jpg";
@@ -6,31 +6,12 @@ import TutorialImage03 from "@/public/images/tutorial-03.jpg";
 import TutorialImage04 from "@/public/images/tutorial-04.jpg";
 import CardArticle from "@/components/cardServicii";
 import Link from "next/link";
+import { servicii } from "@/content/servicii";
 
-
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 
 export default function TutorialsContent() {
-
-  const [post, setPost] = useState<any>([])
-
-  useEffect(() => {
-    async function getProiecte() {
-      const response = await fetch("https://consulting-staff-app-754757bb2499.herokuapp.com/servicii");
-
-      if (!response.ok) {
-        const message = `An error occurred: ${response.statusText}`;
-        window.alert(message);
-        return;
-      }
-
-      const records = await response.json();
-      console.log(records)
-      setPost(records);
-    }
-
-    getProiecte();
-  }, []);
+  const [post, setPost] = useState<any>(servicii);
 
   return (
     <section className="relative">
@@ -39,8 +20,9 @@ export default function TutorialsContent() {
           {/* Page header */}
           <div className="max-w-3xl pb-5 md:pb-50 text-center md:text-left">
             <h1 className="h1">Promovare Servicii</h1>
-            <p className="text-xl text-gray-600">Exploreaza serviciile oferite de partenerii nostri</p>
-
+            <p className="text-xl text-gray-600">
+              Exploreaza serviciile oferite de partenerii nostri
+            </p>
           </div>
 
           {/* Section tags */}
@@ -79,15 +61,19 @@ export default function TutorialsContent() {
             {/* Articles container */}
             <div className="grid gap-12 md:grid-cols-3 md:gap-x-6 md:gap-y-8 items-start">
               {post.map((card: any, index: any) => {
-                const imageSrc = typeof card.imagine === 'string' && card.imagine.trim() !== '' ? card.imagine : TutorialImage01;
+                const imageSrc =
+                  typeof card.imagine === "string" && card.imagine.trim() !== ""
+                    ? card.imagine
+                    : TutorialImage01;
                 return (
-                  <Link href={`/servicii/${card._id}`} key={index}>
+                  <Link href={`/servicii/${index}`} key={index}>
                     <CardArticle
-                      imagine={imageSrc}
+                      imagine={card.imagine}
                       titlu={card.titlu}
-                      descriere={card.descriere}
-                      locatie={card.locatie}
-                      proiect={card.proiect}
+                      intro={card.intro}
+                      firma={card.firma}
+                      prezentare={card.prezentare}
+                      cuprins={card.curpins}
                     />
                   </Link>
                 );

@@ -63,9 +63,9 @@ export default function TutorialsContent() {
               {afacere1array.map((card: any, index: any) => {
                 const imageSrc = typeof card.imagine === 'string' && card.imagine.trim() !== '' ? card.imagine : TutorialImage01;
                 return (
-                  <Link href={`/afaceri/1`} key={index}>
+                  <Link href={`/afaceri/${index}`} key={index}>
                     <CardArticle
-                      imagine={imageSrc}
+                      imagine={card.imagine}
                       titlu={card.titlu}
                       intro={card.intro}
                       descriere={card.descriere}

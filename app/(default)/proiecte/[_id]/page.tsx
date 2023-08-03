@@ -18,12 +18,14 @@ export const metadata = {
 //   return data;
 // }
 
-export default async function TutorialsContent() {
+export default async function TutorialsContent({params}: any) {
   // const proiect: any = await getProiect(params._id);
 
   // console.log("proiect", proiect);
 
-  const proiect: any = proiecte[0];
+
+
+  const proiect: any = proiecte[params._id];
 
   // imagine: TutorialImage04,
   // titlu: "Proiect 4",
@@ -55,7 +57,7 @@ export default async function TutorialsContent() {
                     <figure className="relative h-0 pb-9/16 overflow-hidden translate-z-0 rounded">
                       <Image
                         className="absolute inset-0 w-full h-full object-cover transform scale-105 hover:-translate-y-1 transition duration-700 ease-out"
-                        src={TutorialImage01}
+                        src={proiect.imagine}
                         width={352}
                         height={198}
                         alt="imagine"

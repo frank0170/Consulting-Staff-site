@@ -29,18 +29,24 @@ export default function TestimonialsCarousel() {
     {
       // img: UserImage01,
       alt: 'Testimonial 01',
-      quote: '“ Iubesc acest produs si il recomand oricui. Nu ar putea fi mai ușor de utilizat, iar site-urile noastre multiple sunt minunate. Primim comentarii frumoase tot timpul.“',
-      name: 'Stef Pavel',
+      quote: `Cu bucurie și mândrie vă împărtășesc vestea că proiectul nostru de finanțare pentru sala noastră de evenimente a fost implementat cu succes! Acest succes nu ar fi fost posibil fără efortul și sprijinul vostru necondiționat. Vreau să vă mulțumesc din suflet pentru susținerea și încrederea acordată echipei noastre.
+
+      Cu această finanțare, am putut să modernizăm și să extindem facilitățile noastre, oferind astfel o experiență mai bună și mai memorabilă clienților noștri. Am investit în echipamente de ultimă generație și am îmbunătățit serviciile noastre, asigurându-ne că fiecare eveniment găzduit în sala noastră va fi un succes garantat.
+      
+      Succesul proiectului nu a fost doar o realizare financiară, ci și o dovadă a capacității noastre de a inova și de a ne adapta la cerințele din ce în ce mai exigente ale industriei evenimentelor. Suntem mândri că putem oferi acum o locație de top, potrivită pentru orice tip de eveniment, de la conferințe și seminarii la nunți și petreceri private.`,
+      name: 'Zetu Dana',
       role: 'CEO',
       href: '#0',
-      team: '@ Jude Construct',
-      link: '#0'
+      team: '@ Valery Evenimente SRL',
+            link: '#0'
     },
     {
       // img: UserImage02,
       alt: 'Testimonial 02',
-      quote: '“Nu numai în carieră, ci și în educație, sunt recunoscător că Simple m-a împins să-mi extind orizonturile și să mă străduiesc să realizez mai mult.“',
-      name: 'Dana Zetu',
+      quote: `Mă bucur să vă împărtășesc vestea cu privire la un proiect de finanțare implementat cu succes în cadrul companiei noastre de catering! Datorită eforturilor dedicate și pasiunii echipei noastre, am reușit să aducem la îndeplinire acest proiect, consolidând poziția noastră pe piață și sporind calitatea serviciilor oferite.
+
+      Este o realizare mândră pentru noi, deoarece acest proiect ne-a permis să extindem oferta de meniuri și să investim în echipamente moderne, sporind astfel eficiența și profesionalismul nostru. În plus, am consolidat parteneriatele noastre strategice și am dezvoltat o rețea de clienți fideli, ceea ce ne motivează să continuăm să excelăm în domeniul cateringului.`,
+      name: 'Zetu Cristian',
       role: 'CEO',
       href: '#0',
       team: '@ Valery Events SRL',
@@ -49,11 +55,13 @@ export default function TestimonialsCarousel() {
     {
       // img: UserImage03,
       alt: 'Testimonial 03',
-      quote: '“ Sunt recunoscător că Consulting Staff m-a împins să-mi extind orizonturile și să mă străduiesc să realizez mai mult, nu numai în carieră, ci și în educație.“',
-      name: 'Zetu Cristain',
+      quote: `Cu bucurie și mândrie, vă adresez acest feedback pentru a împărtăși succesul extraordinar al proiectului nostru de finanțare implementat cu succes. Acest proiect a reprezentat o provocare majoră pentru întreaga echipă, iar rezultatele obținute demonstrează angajamentul nostru ferm pentru excelență și inovație.
+
+      Prin efortul colectiv, am reușit să obținem finanțarea necesară pentru a duce la îndeplinire planurile noastre ambițioase de extindere și dezvoltare. Astăzi, suntem mândri să vă anunțăm că am reușit să consolidezăm poziția companiei noastre pe piață și să livrăm proiecte de construcții remarcabile, care aduc plus valoare comunităților în care activăm.`,
+      name: 'Jude Radu',
       role: 'CEO',
       href: '#0',
-      team: '@ Zetu SRL',
+      team: '@ Jude Construct SRL',
       link: '#0'
     }  
   ]
@@ -204,7 +212,7 @@ export default function TestimonialsCarousel() {
                       unmount={false}
                     >
                       <div className="absolute top-0 -mt-8 left-1/2 transform -translate-x-1/2">
-                        <svg className="absolute top-0 right-0 -mt-3 -mr-8 w-16 h-16 fill-current text-blue-500" viewBox="0 0 64 64" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                        <svg className="absolute top-0 right-0 -mt-3 -mr-8 w-16 h-16 fill-current text-orange-600" viewBox="0 0 64 64" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
                           <path d="M37.89 58.338c-2.648-5.63-3.572-10.045-2.774-13.249.8-3.203 8.711-13.383 23.737-30.538l2.135.532c-6.552 10.033-10.532 17.87-11.939 23.515-.583 2.34.22 6.158 2.41 11.457l-13.57 8.283zm-26.963-6.56c-2.648-5.63-3.572-10.046-2.773-13.25.799-3.203 8.71-13.382 23.736-30.538l2.136.533c-6.552 10.032-10.532 17.87-11.94 23.515-.583 2.339.22 6.158 2.41 11.456l-13.57 8.283z" />
                         </svg>
                         {/* <Image className="relative rounded-full" src={item.img} width={96} height={96} alt={item.alt} /> */}
@@ -212,7 +220,7 @@ export default function TestimonialsCarousel() {
                       <blockquote className="text-xl font-medium mb-4">{item.quote}</blockquote>
                       <cite className="block font-bold text-lg not-italic mb-1">{item.name}</cite>
                       <div className="text-gray-600">
-                        <span>{item.role}</span> <a className="text-blue-600 hover:underline" href={item.href}>{item.team}</a>
+                        <span>{item.role}</span> <a className="text-orange-600 hover:underline" href={item.href}>{item.team}</a>
                       </div>
                     </Transition>
                   ))}

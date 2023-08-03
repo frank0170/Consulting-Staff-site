@@ -31,6 +31,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".contentlayer/generated"
-  ],
+, "content/afaceri.js"  ],
   "exclude": ["node_modules"]
 }

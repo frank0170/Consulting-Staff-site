@@ -1,7 +1,7 @@
 import TutorialImage01 from "@/public/images/consult-main.jpg";
 import Image from "next/image";
 import ContactForm from "./contactForm";
-import { afacere1 } from "@/content/afaceri";
+import { afacere1array } from "@/content/afaceri";
 
 export const metadata = {
   title: "Afaceri",
@@ -22,7 +22,7 @@ export const metadata = {
 export default async function TutorialsContent({ params }: any) {
   // const proiect: any = await getProiect(params._id);
 
-  const proiect = afacere1;
+  const proiect = afacere1array[params._id];
 
   // imagine: TutorialImage04,
   // titlu: "Proiect 4",
@@ -54,7 +54,7 @@ export default async function TutorialsContent({ params }: any) {
                     <figure className="relative h-0 pb-9/16 overflow-hidden translate-z-0 rounded">
                       <Image
                         className="absolute inset-0 w-full h-full object-cover transform scale-105 hover:-translate-y-1 transition duration-700 ease-out"
-                        src={TutorialImage01}
+                        src={proiect.imagine}
                         width={352}
                         height={198}
                         alt="imagine"
@@ -110,19 +110,24 @@ export default async function TutorialsContent({ params }: any) {
                   <div className="border-b border-gray-300 pb-4 mt-5 mb-5" />
 
                   <br />
-                  <p className="text-orange-600 text-lg">
-                    <b >Date de Contact</b>
-                    </p>
+                  <div>
+                    {" "}
+                    <b style={{fontSize: '25px'}}>Date de Contact</b>
                     <br />
-                    <p className="mb-2">
-                      Nume: <b>Lelica Crisan</b>
+                    <br />
+                    <p style={{fontSize: '22px'}}>
+                      Nume:  <b className="text-orange-700">Lelica Crisan</b>
                     </p>
-                    <p className="mb-2">
-                      Telefon:<b>0711111111</b>
+                    <br/>
+                    <p style={{fontSize: '22px'}}>
+                      Telefon:  <b className="text-orange-700">0744 506 685</b>
                     </p>
-                    <p className="mb-2">
-                      Email: <b>consulting.staff@yahoo.com</b>
+                    <br/>
+
+                    <p style={{fontSize: '22px'}}>
+                      Email: <b className="text-orange-700">consulting.staff@yahoo.com</b>
                     </p>
+                  </div>
                   
                 </div>
               </div>
