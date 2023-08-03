@@ -1,7 +1,7 @@
 export const servicii = [
   {
     titlu: "Consultanta in afaceri",
-    imagine: "/../public/images/consult-main.jpg",
+    imagine: "/images/consult-main.jpg",
     intro: "Servicii complete de consultanta in afaceri",
     firma: "Consulting Staff",
     prezentare: `Serviciul de consultanță în afaceri este un sprijin profesionist și specializat oferit atât întreprinderilor existente, cât și antreprenorilor în curs de dezvoltare sau începătorilor care doresc să își îmbunătățească, să își extindă sau să își lanseze propria afacere. Acest serviciu este furnizat de către experți în domeniul afacerilor, cum ar fi consultanți de management, analiști financiari, specialiști în marketing și alte persoane calificate.`,
