@@ -14,7 +14,7 @@ import Image from 'next/image'
   <div className="mb-3">
     <ul className="flex flex-wrap text-xs font-medium -m-1">
       <li className="m-1">
-        <a className="inline-flex text-center text-gray-100 py-1 px-3 rounded-full bg-orange-500 hover:bg-blue-600 transition duration-150 ease-in-out" href="#0">{firma}</a>
+        <a className="inline-flex text-center text-gray-100 py-1 px-3 rounded-full bg-orange-500 hover:bg-orange-600 transition duration-150 ease-in-out" href="#0">{firma}</a>
       </li>
       {/* <li className="m-1">
         <a className="inline-flex text-center text-gray-800 py-1 px-3 rounded-full bg-orange-100 hover:bg-blue-200 transition duration-150 ease-in-out" href="#0">proiect</a>
