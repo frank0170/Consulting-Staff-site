@@ -23,7 +23,7 @@ export const servicii = [
   },
   {
     titlu: "Consultanta financiara",
-    imagine: "/../public/images/tutorial-06.jpg",
+    imagine: "/images/tutorial-06.jpg",
     intro: "Servicii de consultanta financiara in afaceri",
     firma: "Consulting Staff",
     prezentare: `Serviciul de consultanță financiară este o asistență specializată oferită persoanelor sau companiilor pentru a-și gestiona și optimiza situația financiară. Acest serviciu este furnizat de către experți financiari, cum ar fi consultanți financiari, planificatori financiari sau analiști financiari, care au expertiză în domeniul financiar și cunoștințe aprofundate despre piețele financiare, investiții, economie și fiscalitate.`,
@@ -41,7 +41,7 @@ export const servicii = [
   },
   {
     titlu: "Infiintare societate",
-    imagine: "/../public/images/tutorial-09.jpg",
+    imagine: "/images/tutorial-09.jpg",
     intro: "Servicii complete de infintari societati",
     firma: "Consulting Staff",
     prezentare: `Serviciul de înființare a firmei este o asistență specializată și profesionistă oferită persoanelor sau grupurilor care doresc să își creeze propria afacere sau societate comercială. 
@@ -64,7 +64,7 @@ export const servicii = [
   },
   {
     titlu: "Modificare societate",
-    imagine: "/../public/images/tutorial-04.jpg",
+    imagine: "/images/tutorial-04.jpg",
     intro: "Servicii complete de modificat date societate",
     firma: "Consulting Staff",
     prezentare: `Serviciul de modificare a societății este o asistență specializată oferită firmelor sau societăților comerciale pentru a efectua schimbări legate de structura, activitățile sau informațiile înregistrate în actele lor juridice. Aceste modificări pot fi necesare din diverse motive, cum ar fi restructurarea afacerii, schimbarea adresei sediului social, modificarea denumirii sau obiectului de activitate, schimbarea componenței acționariatului și altele.`,
@@ -99,7 +99,7 @@ export const servicii = [
   },
   {
     titlu: "Servicii Registrul Comertului",
-    imagine: "/../public/images/tutorial-03.jpg",
+    imagine: "/images/tutorial-03.jpg",
     intro: "Servicii registrul comertului",
     firma: "Consulting Staff",
     prezentare: `Serviciile unei firme de consultanță în legătură cu Registrul Comerțului se referă la asistență specializată oferită întreprinderilor și antreprenorilor pentru a-și îndeplini cerințele legale privind înregistrarea, modificarea sau radierea informațiilor comerciale la Registrul Comerțului. Acest serviciu este important, deoarece Registrul Comerțului este o instituție oficială care centralizează și gestionează informațiile despre societățile comerciale dintr-o țară.`,

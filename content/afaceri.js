@@ -3,7 +3,7 @@
 export const afacere1array = [
   {
     titlu: "ConstructVille SRL",
-    imagine: "/../public/images/tutorial-07.jpg",
+    imagine: "/images/tutorial-07.jpg",
     intro: "Firma de constructii specializate pe cartiere de blocuri",
     caen: 4520,
     cui: 4167893,
