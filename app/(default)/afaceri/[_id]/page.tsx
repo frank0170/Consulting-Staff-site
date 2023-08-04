@@ -36,7 +36,7 @@ export default async function TutorialsContent({ params }: any) {
   return (
     <div>
       <section className="relative">
-        <div className="max-w-6xl mx-auto px-1 sm:px-1">
+      <div className="max-w-6xl mx-auto px-5 sm:px-5 mx-5 sm:px-5">
           <div className="pt-20 pb-12 md:pt-20 md:pb-5">
             {/* Page header */}
 

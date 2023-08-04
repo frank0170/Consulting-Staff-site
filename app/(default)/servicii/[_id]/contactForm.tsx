@@ -10,7 +10,7 @@ const ContactForm = ({ serviciu }: any) => {
   const [cui, setCUI] = useState<any>();
 
   return (
-    <div className="md:col-span-1 ml-3">
+    <div className="md:col-span-1 ml-0 sm:ml-3">
       <div className="pt-5 flex justify-end">
         <a
           href="/afaceri"

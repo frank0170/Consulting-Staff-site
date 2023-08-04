@@ -37,8 +37,8 @@ export default function Newsletter() {
 
               {/* CTA content */}
               <div className="text-center lg:text-left lg:max-w-xl">
-                <h3 className="h3 text-white mb-2">Doriti sa ramaneti conectat la cele mai recente si atractive noutati din mediul de afaceri? </h3>
-                <p className="text-gray-300 text-lg mb-6">Abonati-va la newsletter-ul nostru si nu pierdeti ultimele stiri si tendinte din mediul de afaceri.</p>
+                <h3 className="sm:h3 h4 text-white mb-2">Doriti sa ramaneti conectat la cele mai recente si atractive noutati din mediul de afaceri? </h3>
+                <p className="text-gray-300 sm:text-lg text-sm mb-6">Abonati-va la newsletter-ul nostru si nu pierdeti ultimele stiri si tendinte din mediul de afaceri.</p>
 
                 {/* CTA form */}
                 <form className="w-full lg:w-auto">
