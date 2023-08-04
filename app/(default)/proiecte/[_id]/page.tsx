@@ -152,7 +152,7 @@ export default async function TutorialsContent({params}: any) {
               </div>
 
               {/* grid 2 */}
-              <div className="md:col-span-1 ml-3">
+              <div className="md:col-span-1 ml-0 sm:ml-3">
                 <div className="pt-5 flex justify-end">
                   <a
                     href="/proiecte"

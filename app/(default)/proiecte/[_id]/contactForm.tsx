@@ -11,7 +11,7 @@ const ContactForm = ({ firma }: any) => {
   const [mesaj, setMesaj] = useState<any>();
 
   return (
-    <div className="md:col-span-1 ml-3">
+    <div className="md:col-span-1 ml-0 sm:ml-3">
       <div className="border border-gray-300 pb-4 mt-1 mb-5 flex flex-col justify-center items-center">
         <br />
         Esti interesat de aceasta finantare?

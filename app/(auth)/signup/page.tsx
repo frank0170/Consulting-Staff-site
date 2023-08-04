@@ -11,7 +11,7 @@ export default function SignUp() {
   const [mesaj, setMesaj] = useState<any>();
   return (
     <section className="bg-gradient-to-b from-gray-100 to-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 mt-20 sm:mt-20">
         <div className="pt-30 pb-12 md:pt-28 md:pb-20">
           {/* Page header */}
           <div className="max-w-3xl mx-auto text-center pb-10 md:pb-15">
