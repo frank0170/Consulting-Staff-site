@@ -76,7 +76,7 @@ export default async function TutorialsContent({ params }: any) {
                   {proiect.prezentare
                     .split("\n")
                     .map((item: any, index: any) => (
-                      <p key={index} className='text-left mb-2'>{item}</p>
+                      <p key={index} className='mb-2'>{item}</p>
                     ))}
 
                   <br />
