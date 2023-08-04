@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import NewsImage01 from '@/public/images/news-01.jpg'
-import NewsImage02 from '@/public/images/news-02.jpg'
-import NewsImage03 from '@/public/images/news-03.jpg'
+import NewsImage01 from '@/public/images/stef-poza.webp'
+import NewsImage02 from '@/public/images/zetu-poza.jpg'
+import NewsImage03 from '@/public/images/valery-poza.jpg'
 import NewsAuthor01 from '@/public/images/news-author-01.jpg'
 import NewsAuthor02 from '@/public/images/news-author-02.jpg'
 
