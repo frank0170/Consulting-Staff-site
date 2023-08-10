@@ -25,7 +25,7 @@ export default function CardArticle({
           <figure className="relative h-0 pb-9/16 overflow-hidden translate-z-0 rounded">
             <Image
               className="absolute inset-0 w-full h-full object-cover transform scale-105 hover:-translate-y-1 transition duration-700 ease-out"
-              src={TutorialImage01}
+              src={imagine}
               width={352}
               height={198}
               alt="imagine"

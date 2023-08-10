@@ -4,11 +4,12 @@ export const proiecte = [
     titlu: "Programul Regiunea Centru 2021-2027",
     activ: true,
     intro: `25.000 – 200.000 euro - Scale up pentru start-up-uri și microîntreprinder`,
-    descriere:`Întreprinderile trebuie să fie non agricole din mediul urban si au înregistrat/ înregistrează inclusiv la data acordării ajutorului un număr mediu de salariați de cel puțin 1.
+    descriere: `Întreprinderile trebuie să fie non agricole din mediul urban si au înregistrat/ înregistrează inclusiv la data acordării ajutorului un număr mediu de salariați de cel puțin 1.
     Tipul de cheltuieli eligibile sunt lucrări de construire, extindere, spatii de productie/prestare de servicii; echipamente, dotări, active corporale; servicii; cheltuieli cu active necorporale brevete, licenţe, mărci comerciale, programe informatice, alte drepturi şi active similare.
    `,
     beneficiariIntro: "Microîntreprinderi",
-    beneficiari: "Microîntreprinderi, inclusiv microîntreprinderi nou înființate sub formă de start-up-uri, care își desfășoară activitatea în mediul urban",
+    beneficiari:
+      "Microîntreprinderi, inclusiv microîntreprinderi nou înființate sub formă de start-up-uri, care își desfășoară activitatea în mediul urban",
     valoare: "25.000 - 200.000 euro",
     finantareMin: "25.000 Euro",
     finantareMax: "200.000 Euro",
@@ -70,4 +71,68 @@ Nu sunt eligibile proiectele care includ doar investiții în active necorporale
 •	Cheltuieli pentru instruirea angajaților - maxim 25% din investiția în echipamente, fără a depăși 6.000 euro / proiect.
 `,
   },
+  {
+    imagine: "/images/groupe-3.png",
+    titlu: "Programul Regional Sud-Muntenia 2021-2027",
+    activ: true,
+    intro: `50.000 – 200.000 euro - Scale up pentru start-up-uri și microîntreprinder`,
+    descriere: `Intreprinderile trebuie sa fie non agricole din mediul rural si din mediul urban (inclusiv din satele apartinatoare acestora)
+   `,
+    beneficiariIntro: "Microîntreprinderi",
+    beneficiari: "Microintreprinderi, Intreprinderi mici ",
+    valoare: "50.000 - 200.000 euro",
+    finantareMin: "50.000 Euro",
+    finantareMax: "200.000 Euro",
+    finantareCo: 10,
+    cofinantare: "10%",
+    locatie: "Regiunea Sud-Muntenia",
+    locatieDesc: `Regiunea Centru, România (județele Alba, Brașov, Covasna, Harghita, Mureș, Sibiu), în mediul urban`,
+    eligibilitate: `•	Solicitantul a înregistrat profit din exploatare sau profit net (>0 lei) în anul fiscal
+anterior depunerii cererii de finanțare sau în anul 2019
+•	a desfășurat activitate pe o perioadă corespunzătoare cel puțin unui an fiscal integral (nu se aplică microîntreprinderilor înființate în anul depunerii cererii de finanțare)
+•	Solicitantul a înregistrat un număr mediu de salariați de cel puțin 1 (un salariat), în anul fiscal anterior depunerii cererii de finanțare sau Solicitantul are cel puțin un salariat cu normă întreagă pe perioadă nedeterminată, la data depunerii cererii de finanțare
+`,
+    cheltuieliEligibile: `
+    1. Lucrări de construire, extindere, spatii de productie/prestare de servicii. 
+
+2. Echipamente, dotări, active corporale
+
+3. Servicii
+
+4. Cheltuieli cu active necorporale brevete, licenţe, mărci comerciale, programe informatice, alte drepturi şi active similare. 
+
+
+    5. Investiţii în active corporale:
+    • lucrări de construire/ extindere/ a spaţiilor de producţie/ prestare de servicii ale microîntreprinderilor și întreprinderilor mici, inclusiv a utilităţilor generale aferente investitiei (alimentare cu apă, canalizare, alimentare cu gaze naturale, agent termic, energie electrică, PSI);
+    • achiziţionarea de echipamente tehnologice, utilaje, instalaţii de lucru, mobilier, echipamente informatice, birotică, de natura mijloacelor fixe, respectiv care se regăsesc în subgrupa 2.1. "Echipamente tehnologice (maşini, utilaje şi instalaţii de lucru)", subgrupa 2.2. "Aparate şi instalaţii de măsurare, control şi reglare", clasa 2.3.6. "Utilaje şi instalaţii de transportat şi ridicat" sau grupa 3 "Mobilier, aparatură birotică, sisteme de protecţie a valorilor umane şi materiale şi alte active corporale" prevăzute în anexa la Hotărârea Guvernului nr. 2.139/2004 pentru aprobarea Catalogului privind clasificarea şi duratele normale de funcţionare a mijloacelor fixe, cu modificările ulterioare, şi care se încadrează în limita valorică aferentă mijloacelor fixe, stabilită prin reglementările legale în vigoare la data depunerii cererii de finanţare;
+    • achiziţionarea de instalaţii/ echipamente specifice în scopul obţinerii unei economii de energie, precum şi sisteme care utilizează surse regenerabile (alternative) de energie pentru eficientizarea activităţilor pentru care a solicitat finanţare, în limita a 15% din valoarea eligibilă a proiectului. Surse regenerabile (alternative) de energie sunt considerate: energia solară (utilizată la producerea de căldură sau la furnizarea de energie electrică prin sisteme fotovoltaice), energia eoliană, hidroenergia, biomasa (biodiesel, bioetanol, biogaz), energia
+
+    6.Investiţii în active necorporale: 
+    • brevete, licenţe, mărci comerciale, programe informatice, alte drepturi şi active similare, în limita a 10% din valoarea eligibilă a proiectului; proiectul trebuie să cuprindă, în mod obligatoriu, investiţii în active corporale. Este opţională includerea în proiect a investiţiilor în active necorporale. 
+
+    7. Investiţii în realizarea de instrumente de comercializare on-line a serviciilor/produselor proprii ale solicitantului, pentru crearea unui magazin virtual (e-shop) în care vor fi implementate diferite funcţionalităţi specifice comerţului electronic:
+    • publicarea cataloagelor de articole, preţuri şi stocuri, preluarea comenzilor, instrumente de plată electronică. 
+
+  `,
+  },
+
+  // {
+  //   imagine: "/images/groupe-3.png",
+  //   titlu: "",
+  //   activ: true,
+  //   intro: ``,
+  //   descriere: `
+  //  `,
+  //   beneficiariIntro: "",
+  //   beneficiari: "",
+  //   valoare: "",
+  //   finantareMin: "",
+  //   finantareMax: "",
+  //   finantareCo: "",
+  //   cofinantare: "",
+  //   locatie: "",
+  //   locatieDesc: ``,
+  //   eligibilitate: `•`,
+  //   cheltuieliEligibile: `•`,
+  // },
 ];
