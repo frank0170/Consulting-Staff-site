@@ -131,6 +131,7 @@ export default function TutorialsContent() {
                       imagine={imageSrc}
                       titlu={card.titlu}
                       intro={card.intro}
+                      activ={card.activ}
                       beneficiariIntro={card.beneficiariIntro}
                       valoare={card.valoare}
                       cofinantare={card.cofinantare}
