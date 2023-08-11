@@ -4,8 +4,10 @@ import { useState, useEffect } from "react";
 
 import Link from "next/link";
 
+
 import Dropdown from "@/components/utils/dropdown";
 import MobileMenu from "./mobile-menu";
+import Head from "next/head";
 
 export const Logo = () => {
   return (
@@ -267,6 +269,14 @@ export default function Header() {
         !top ? "bg-white backdrop-blur-sm shadow-lg" : ""
       }`}
     >
+      <Head>
+      <meta property="og:title" content="My Page Title 22" />
+        <meta property="og:description" content="Description of my page 33." />
+        <meta property="og:image" content="https://example.com/my-image.jpg" />
+        <meta property="og:url" content="https://lelica-crisan.ro" />
+        <meta property="og:type" content="website" />
+
+      </Head>
       <div className="max-w-6xl mx-auto px-5 sm:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Site branding */}
