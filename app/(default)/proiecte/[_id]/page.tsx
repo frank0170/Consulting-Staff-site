@@ -1,4 +1,4 @@
-import TutorialImage01 from "@/public/images/group-1.png";
+import TutorialImage01 from "@/public/images/default.png";
 import Image from "next/image";
 import { proiecte } from "@/content/proiecte";
 import ContactForm from "./contactForm";
@@ -8,24 +8,24 @@ export const metadata = {
   description: "Page description",
 };
 
-// async function getProiect(id: any) {
-//   const res = await fetch(`http://localhost:5080/proiecte/${id}`,
-//   {cache: 'no-store'});
-//   const data = await res.json();
+async function getProiect(id: any) {
+  const res = await fetch(`http://localhost:5050/api/example/${id}`,
+  {cache: 'no-store'});
+  const data = await res.json();
 
-//   // console.log('data', data)
-//   // console.log('id', id)
-//   return data;
-// }
+  // console.log('data', data)
+  // console.log('id', id)
+  return data;
+}
 
 export default async function TutorialsContent({params}: any) {
-  // const proiect: any = await getProiect(params._id);
+  const proiect: any = await getProiect(params._id);
 
-  // console.log("proiect", proiect);
+  console.log("proiect", proiect);
 
 
 
-  const proiect: any = proiecte[params._id];
+
 
   // imagine: TutorialImage04,
   // titlu: "Proiect 4",
@@ -57,7 +57,7 @@ export default async function TutorialsContent({params}: any) {
                     <figure className="relative h-0 pb-9/16 overflow-hidden translate-z-0 rounded">
                       <Image
                         className="absolute inset-0 w-full h-full object-cover transform scale-105 hover:-translate-y-1 transition duration-700 ease-out"
-                        src={proiect.imagine}
+                        src={proiect.imagine || TutorialImage01}
                         width={352}
                         height={198}
                         alt="imagine"
@@ -104,28 +104,28 @@ export default async function TutorialsContent({params}: any) {
                     {" "}
                     <b>Conditii de eligibilitate</b>
                   </p>
-                  <p>
+                  {/* <p>
                     {" "}
                     {proiect.eligibilitate
                       .split("\n")
                       .map((item: any, index: any) => (
                         <p key={index} className="text-left mb-2">{item}</p>
                       ))}
-                  </p>
+                  </p> */}
 
                   <br />
                   <p className="mb-2">
                     {" "}
                     <b >Categorii de cheltuieli eligibile</b>
                   </p>
-                  <p>
+                  {/* <p>
                     {" "}
                     {proiect.cheltuieliEligibile
                       .split("\n")
                       .map((item: any, index: any) => (
                         <p key={index} className='text-left mb-2'>{item}</p>
                       ))}
-                  </p>
+                  </p> */}
 
                   <div className="border-b border-gray-300 pb-4 mt-5 mb-5" />
 

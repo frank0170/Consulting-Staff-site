@@ -1,6 +1,6 @@
 'use client'
 
-import TutorialImage01 from "@/public/images/group-1.png";
+import TutorialImage01 from "@/public/images/default.png";
 import TutorialImage02 from "@/public/images/tutorial-02.jpg";
 import TutorialImage03 from "@/public/images/tutorial-03.jpg";
 import TutorialImage04 from "@/public/images/tutorial-04.jpg";
@@ -57,26 +57,35 @@ export default function TutorialsContent() {
     },
   ];
 
-  // useEffect(() => {
-  //   async function getProiecte() {
-  //     const response = await fetch("https://consulting-staff-app-754757bb2499.herokuapp.com/proiecte", 
-  //     {cache: 'no-store'}
-  //     );
+  const data = proiecte
 
-  //     if (!response.ok) {
-  //       const message = `An error occurred: ${response.statusText}`;
-  //       window.alert(message);
-  //       return;
-  //     }
+  useEffect(() => {
+    async function getProiecte() {
+      const response = await fetch("http://localhost:5050/api/example", 
+      {cache: 'no-store'}
+      );
 
-  //     const records = await response.json();
-  //     console.log(records)
-  //     setPost(records);
-  //   }
+      if (!response.ok) {
+        const message = `An error occurred: ${response.statusText}`;
+        window.alert(message);
+        return;
+      }
 
-  //   getProiecte();
-  // }, []);
+      const records = await response.json();
+      console.log(records)
 
+      setPost(records)
+      records.forEach((item: any )=>     
+          data.push(item))
+
+    }
+
+    getProiecte();
+
+
+  }, []);
+
+  console.log(data)
   return (
     <section className="relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -123,10 +132,10 @@ export default function TutorialsContent() {
           <div className="max-w-sm mx-auto md:max-w-none">
             {/* Articles container */}
             <div className="grid gap-12 md:grid-cols-3 md:gap-x-6 md:gap-y-8 items-start">
-              {proiecte.map((card: any, index: any) => {
+              {post.map((card: any, index: any) => {
                 const imageSrc = typeof card.imagine === 'string' && card.imagine.trim() !== '' ? card.imagine : TutorialImage01;
                 return (
-                  <Link href={`/proiecte/${index}`} key={index}>
+                  <Link href={`/proiecte/${card._id}`} key={index}>
                     <CardArticle
                       imagine={imageSrc}
                       titlu={card.titlu}
