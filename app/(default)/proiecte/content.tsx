@@ -79,6 +79,7 @@ export default function TutorialsContent() {
     getProiecte();
   }, []);
 
+  
   console.log(data);
   return (
     <section className="relative">
