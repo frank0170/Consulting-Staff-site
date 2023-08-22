@@ -57,7 +57,7 @@ const page = () => {
     };
 
     try {
-      const response = await fetch(`http://localhost:5050/api/example`, {
+      const response = await fetch(`https://consult-basics-test-1aea35fb0e5c.herokuapp.com/api/example`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
