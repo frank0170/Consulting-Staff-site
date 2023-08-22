@@ -1,18 +1,16 @@
-'use client'
+"use client";
 
 import TutorialImage01 from "@/public/images/default.png";
 import TutorialImage02 from "@/public/images/tutorial-02.jpg";
 import TutorialImage03 from "@/public/images/tutorial-03.jpg";
 import TutorialImage04 from "@/public/images/tutorial-04.jpg";
 import CardArticle from "@/components/cardProiect";
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { proiecte } from "@/content/proiecte";
 
-
 export default function TutorialsContent() {
-
-  const [post, setPost] = useState<any>([])
+  const [post, setPost] = useState<any>([]);
 
   const postari = [
     {
@@ -57,13 +55,13 @@ export default function TutorialsContent() {
     },
   ];
 
-  const data = proiecte
+  const data = proiecte;
 
   useEffect(() => {
     async function getProiecte() {
-      const response = await fetch("http://localhost:5050/api/example", 
-      {cache: 'no-store'}
-      );
+      const response = await fetch("http://localhost:5050/api/example", {
+        cache: "no-store",
+      });
 
       if (!response.ok) {
         const message = `An error occurred: ${response.statusText}`;
@@ -72,20 +70,16 @@ export default function TutorialsContent() {
       }
 
       const records = await response.json();
-      console.log(records)
+      console.log(records);
 
-      setPost(records)
-      records.forEach((item: any )=>     
-          data.push(item))
-
+      setPost(records.reverse());
+      records.forEach((item: any) => data.push(item));
     }
 
     getProiecte();
-
-
   }, []);
 
-  console.log(data)
+  console.log(data);
   return (
     <section className="relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -93,8 +87,9 @@ export default function TutorialsContent() {
           {/* Page header */}
           <div className="max-w-3xl pb-5 md:pb-50 text-center md:text-left">
             <h1 className="h1">Proiecte Fonduri</h1>
-            <p className="text-xl text-gray-600">Fonduri nerambursabile pentru intreprinderi</p>
-
+            <p className="text-xl text-gray-600">
+              Fonduri nerambursabile pentru intreprinderi
+            </p>
           </div>
 
           {/* Section tags */}
@@ -133,7 +128,10 @@ export default function TutorialsContent() {
             {/* Articles container */}
             <div className="grid gap-12 md:grid-cols-3 md:gap-x-6 md:gap-y-8 items-start">
               {post.map((card: any, index: any) => {
-                const imageSrc = typeof card.imagine === 'string' && card.imagine.trim() !== '' ? card.imagine : TutorialImage01;
+                const imageSrc =
+                  typeof card.imagine === "string" && card.imagine.trim() !== ""
+                    ? card.imagine
+                    : TutorialImage01;
                 return (
                   <Link href={`/proiecte/${card._id}`} key={index}>
                     <CardArticle

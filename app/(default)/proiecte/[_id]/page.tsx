@@ -98,34 +98,34 @@ export default async function TutorialsContent({params}: any) {
                     Cuantum finantarii acordate:{" "}
                     {100 - Number(proiect.finantareCo)}%
                   </p>
-                  <p>Cofinantare: {proiect.finantareCo}%</p>
+                  <p>Cofinantare: {Number(proiect.finantareCo)}%</p>
                   <br />
                   <p className="mb-2">
                     {" "}
                     <b>Conditii de eligibilitate</b>
                   </p>
-                  {/* <p>
+                  <p>
                     {" "}
                     {proiect.eligibilitate
                       .split("\n")
                       .map((item: any, index: any) => (
                         <p key={index} className="text-left mb-2">{item}</p>
                       ))}
-                  </p> */}
+                  </p>
 
                   <br />
                   <p className="mb-2">
                     {" "}
                     <b >Categorii de cheltuieli eligibile</b>
                   </p>
-                  {/* <p>
+                  <p>
                     {" "}
                     {proiect.cheltuieliEligibile
                       .split("\n")
                       .map((item: any, index: any) => (
                         <p key={index} className='text-left mb-2'>{item}</p>
                       ))}
-                  </p> */}
+                  </p>
 
                   <div className="border-b border-gray-300 pb-4 mt-5 mb-5" />
 
