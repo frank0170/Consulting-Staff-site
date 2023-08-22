@@ -9,7 +9,7 @@ export const metadata = {
 };
 
 async function getProiect(id: any) {
-  const res = await fetch(`http://localhost:5050/api/example/${id}`,
+  const res = await fetch(`https://consult-basics-test-1aea35fb0e5c.herokuapp.com/api/example/${id}`,
   {cache: 'no-store'});
   const data = await res.json();
 
