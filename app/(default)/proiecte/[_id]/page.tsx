@@ -2,6 +2,7 @@ import TutorialImage01 from "@/public/images/default.png";
 import Image from "next/image";
 import { proiecte } from "@/content/proiecte";
 import ContactForm from "./contactForm";
+import React from "react";
 
 export const metadata = {
   title: "Proiecte",
@@ -9,8 +10,9 @@ export const metadata = {
 };
 
 async function getProiect(id: any) {
-  const res = await fetch(`https://consult-basics-test-1aea35fb0e5c.herokuapp.com/api/example/${id}`,
-  {cache: 'no-store'});
+  const res = await fetch(
+    `https://consult-basics-test-1aea35fb0e5c.herokuapp.com/api/example/${id}`
+  );
   const data = await res.json();
 
   // console.log('data', data)
@@ -18,14 +20,10 @@ async function getProiect(id: any) {
   return data;
 }
 
-export default async function TutorialsContent({params}: any) {
+export default async function TutorialsContent({ params }: any) {
   const proiect: any = await getProiect(params._id);
 
   console.log("proiect", proiect);
-
-
-
-
 
   // imagine: TutorialImage04,
   // titlu: "Proiect 4",
@@ -39,7 +37,7 @@ export default async function TutorialsContent({params}: any) {
   return (
     <div>
       <section className="relative">
-      <div className="max-w-6xl mx-auto px-5 sm:px-5 mx-5 sm:px-5">
+        <div className="max-w-6xl mx-auto px-5 sm:px-5 mx-5 sm:px-5">
           <div className="pt-20 pb-12 md:pt-20 md:pb-5">
             {/* Page header */}
 
@@ -109,21 +107,25 @@ export default async function TutorialsContent({params}: any) {
                     {proiect.eligibilitate
                       .split("\n")
                       .map((item: any, index: any) => (
-                        <p key={index} className="text-left mb-2">{item}</p>
+                        <p key={index} className="text-left mb-2">
+                          {item}
+                        </p>
                       ))}
                   </p>
 
                   <br />
                   <p className="mb-2">
                     {" "}
-                    <b >Categorii de cheltuieli eligibile</b>
+                    <b>Categorii de cheltuieli eligibile</b>
                   </p>
                   <p>
                     {" "}
                     {proiect.cheltuieliEligibile
                       .split("\n")
                       .map((item: any, index: any) => (
-                        <p key={index} className='text-left mb-2'>{item}</p>
+                        <p key={index} className="text-left mb-2">
+                          {item}
+                        </p>
                       ))}
                   </p>
 
@@ -132,20 +134,22 @@ export default async function TutorialsContent({params}: any) {
                   <br />
                   <div>
                     {" "}
-                    <b style={{fontSize: '25px'}}>Date de Contact</b>
+                    <b style={{ fontSize: "25px" }}>Date de Contact</b>
                     <br />
                     <br />
-                    <p style={{fontSize: '22px'}}>
-                      Nume:  <b className="text-orange-700">Lelica Crisan</b>
+                    <p style={{ fontSize: "22px" }}>
+                      Nume: <b className="text-orange-700">Lelica Crisan</b>
                     </p>
-                    <br/>
-                    <p style={{fontSize: '22px'}}>
-                      Telefon:  <b className="text-orange-700">0744 506 685</b>
+                    <br />
+                    <p style={{ fontSize: "22px" }}>
+                      Telefon: <b className="text-orange-700">0744 506 685</b>
                     </p>
-                    <br/>
-
-                    <p style={{fontSize: '22px'}}>
-                      Email: <b className="text-orange-700">consulting.staff@yahoo.com</b>
+                    <br />
+                    <p style={{ fontSize: "22px" }}>
+                      Email:{" "}
+                      <b className="text-orange-700">
+                        consulting.staff@yahoo.com
+                      </b>
                     </p>
                   </div>
                 </div>
