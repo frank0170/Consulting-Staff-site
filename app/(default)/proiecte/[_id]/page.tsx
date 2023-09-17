@@ -65,16 +65,16 @@ export default async function TutorialsContent({ params }: any) {
                 {/* grid 1 */}
 
                 <div className="max-w-3xl pb-5 md:pb-5 text-center md:text-left">
-                  <h1 className="h2 mt-10">{proiect.titlu}</h1>
+                  <h1 className="h2 mt-10">{proiect?.titlu}</h1>
 
-                  <p className="text-xl text-gray-600">{proiect.intro}</p>
+                  <p className="text-xl text-gray-600">{proiect?.intro}</p>
                   <br />
 
                   <div className="block mb-6" suppressHydrationWarning>
                     <figure className="relative h-0 pb-9/16 overflow-hidden translate-z-0 rounded">
                       <Image
                         className="absolute inset-0 w-full h-full object-cover transform scale-105 hover:-translate-y-1 transition duration-700 ease-out"
-                        src={proiect.imagine || TutorialImage01}
+                        src={proiect?.imagine || TutorialImage01}
                         width={352}
                         height={198}
                         alt="imagine"
@@ -86,7 +86,7 @@ export default async function TutorialsContent({ params }: any) {
                     {" "}
                     <b>Descrierea finantarii</b>
                   </p>
-                  <p>{proiect.descriere}</p>
+                  <p>{proiect?.descriere}</p>
 
                   <br />
 
@@ -94,14 +94,14 @@ export default async function TutorialsContent({ params }: any) {
                     {" "}
                     <b>Beneficiari eligibili</b>
                   </p>
-                  <p>{proiect.beneficiari}</p>
+                  <p>{proiect?.beneficiari}</p>
 
                   <br />
                   <p className="mb-2">
                     {" "}
                     <b>Locatie implementare</b>
                   </p>
-                  <p>{proiect.locatieDesc}</p>
+                  <p>{proiect?.locatieDesc}</p>
 
                   <br />
                   <p className="mb-2">
@@ -113,9 +113,9 @@ export default async function TutorialsContent({ params }: any) {
                   <br />
                   <p>
                     Cuantum finantarii acordate:{" "}
-                    {100 - Number(proiect.finantareCo)}%
+                    {100 - Number(proiect?.finantareCo)}%
                   </p>
-                  <p>Cofinantare: {Number(proiect.finantareCo)}%</p>
+                  <p>Cofinantare: {Number(proiect?.finantareCo)}%</p>
                   <br />
                   <p className="mb-2">
                     {" "}
@@ -123,7 +123,7 @@ export default async function TutorialsContent({ params }: any) {
                   </p>
                   <p>
                     {" "}
-                    {proiect.eligibilitate
+                    {proiect?.eligibilitate
                       .split("\n")
                       .map((item: any, index: any) => (
                         <p key={index} className="text-left mb-2">
@@ -139,7 +139,7 @@ export default async function TutorialsContent({ params }: any) {
                   </p>
                   <p>
                     {" "}
-                    {proiect.cheltuieliEligibile
+                    {proiect?.cheltuieliEligibile
                       .split("\n")
                       .map((item: any, index: any) => (
                         <p key={index} className="text-left mb-2">
@@ -185,7 +185,7 @@ export default async function TutorialsContent({ params }: any) {
                   </a>
                 </div>
                 <br />
-                <ContactForm firma={proiect.titlu} />
+                <ContactForm firma={proiect?.titlu} />
               </div>
             </div>
           </div>
