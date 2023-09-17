@@ -1,15 +1,12 @@
-"use client";
-
 import TutorialImage01 from "@/public/images/default.png";
 import Image from "next/image";
 import { proiecte } from "@/content/proiecte";
 import ContactForm from "./contactForm";
-import React, { useState, useEffect } from "react";
 
-// export const metadata = {
-//   title: "Proiecte",
-//   description: "Page description",
-// };
+export const metadata = {
+  title: "Proiecte",
+  description: "Page description",
+};
 
 async function getProiect(id: any) {
   const res = await fetch(
@@ -23,35 +20,9 @@ async function getProiect(id: any) {
 }
 
 export default async function TutorialsContent({ params }: any) {
-  // const proiect: any = await getProiect(params._id);
+  const proiect: any = await getProiect(params._id);
 
   // console.log("proiect", proiect);
-
-  const [proiect, setProiect] = useState<any>({});
-
-  // imagine: TutorialImage04,
-  // titlu: "Proiect 4",
-  // beneficiari: "1",
-  // valoare: "50-100",
-  // cofinantare: "10%",
-  // locatie: " vest",
-  // proiect: "PNRR",
-  // firma: "tractor",
-
-  useEffect(() => {
-    async function getProiect(id: any) {
-      const res = await fetch(
-        `https://consult-basics-test-1aea35fb0e5c.herokuapp.com/api/example/${id}`
-      );
-      const data = await res.json();
-
-      // console.log('data', data)
-      // console.log('id', id)
-      setProiect(data);
-    }
-
-    getProiect(params._id);
-  });
 
   return (
     <div>
