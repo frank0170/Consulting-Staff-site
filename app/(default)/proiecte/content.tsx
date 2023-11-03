@@ -59,9 +59,12 @@ export default function TutorialsContent() {
 
   useEffect(() => {
     async function getProiecte() {
-      const response = await fetch("https://consult-basics-test-1aea35fb0e5c.herokuapp.com/api/example", {
-        cache: "no-store",
-      });
+      const response = await fetch(
+        "https://consult-basics-test-1aea35fb0e5c.herokuapp.com/api/example",
+        {
+          cache: "no-store",
+        }
+      );
 
       if (!response.ok) {
         const message = `An error occurred: ${response.statusText}`;
@@ -79,8 +82,11 @@ export default function TutorialsContent() {
     getProiecte();
   }, []);
 
-  
-  console.log(data);
+  const [regiune, setRegiune] = useState<any>();
+
+  const filteredPost = post.filter((item: any) =>
+    regiune ? item.locatie.toLowerCase().includes(regiune.toLowerCase()) : true
+  );
   return (
     <section className="relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -94,62 +100,102 @@ export default function TutorialsContent() {
           </div>
 
           {/* Section tags */}
-          <div className="border-b border-gray-300 pb-4 mb-12">
-            {/* <ul className="flex flex-wrap justify-center md:justify-start font-medium -mx-5 -my-1">
-              <li className="mx-5 my-1">
-                <a className="text-blue-600" href="#0">
-                  All
-                </a>
-              </li>
-              <li className="mx-5 my-1">
-                <a className="text-gray-800 hover:underline" href="#0">
-                  Tutorials
-                </a>
-              </li>
-              <li className="mx-5 my-1">
-                <a className="text-gray-800 hover:underline" href="#0">
-                  Tips & Tricks
-                </a>
-              </li>
-              <li className="mx-5 my-1">
-                <a className="text-gray-800 hover:underline" href="#0">
-                  Free ebooks
-                </a>
-              </li>
-              <li className="mx-5 my-1">
-                <a className="text-gray-800 hover:underline" href="#0">
-                  Guides
-                </a>
-              </li>
-            </ul> */}
-          </div>
+          <div className="border-b border-gray-300 pb-4 lg:mb-12"></div>
 
           {/* Articles list */}
-          <div className="max-w-sm mx-auto md:max-w-none">
-            {/* Articles container */}
-            <div className="grid gap-12 md:grid-cols-3 md:gap-x-6 md:gap-y-8 items-start">
-              {post.map((card: any, index: any) => {
-                const imageSrc =
-                  typeof card.imagine === "string" && card.imagine.trim() !== ""
-                    ? card.imagine
-                    : TutorialImage01;
-                return (
-                  <Link href={`/proiecte/${card._id}`} key={index}>
-                    <CardArticle
-                      imagine={imageSrc}
-                      titlu={card.titlu}
-                      intro={card.intro}
-                      activ={card.activ}
-                      beneficiariIntro={card.beneficiariIntro}
-                      valoare={card.valoare}
-                      cofinantare={card.cofinantare}
-                      locatie={card.locatie}
-                      proiect={card.proiect}
-                      firma={card.firma}
-                    />
-                  </Link>
-                );
-              })}
+
+          <div className="lg:grid lg:grid-cols-5 gap-4 p-4">
+            <div className="lg:col-span-1  p-4 border-r border-gray-300">
+              {/* Filters content goes here */}
+
+              <div className="filter-item mb-4 p-4 bg-white rounded-lg shadow-md">
+                <h3 className="text-xl font-bold leading-snug tracking-tight">
+                  Regiunea
+                </h3>
+                <div className="border-b border-gray-300 my-3" />
+
+                <div className="flex flex-col items-center">
+                  <button
+                    className="text-lg font-medium leading-snug tracking-tight text-orange-500 hover:underline mt-3"
+                    onClick={() => setRegiune(null)}
+                  >
+                    Toate
+                  </button>
+
+                  <button
+                    className="text-lg font-medium leading-snug tracking-tight text-orange-500 hover:underline mt-3"
+                    onClick={() => setRegiune("Regiunea Nord-Vest")}
+                  >
+                    Nord-Vest
+                  </button>
+
+                  <button
+                    className="text-lg font-medium leading-snug tracking-tight text-orange-500 hover:underline mt-3"
+                    onClick={() => setRegiune("Regiunea Nord-Est")}
+                  >
+                    Nord-Est
+                  </button>
+
+                  <button
+                    className="text-lg font-medium leading-snug tracking-tight text-orange-500 hover:underline mt-3"
+                    onClick={() => setRegiune("Regiunea Vest")}
+                  >
+                    Vest
+                  </button>
+
+                  <button
+                    className="text-lg font-medium leading-snug tracking-tight text-orange-500 hover:underline mt-3"
+                    onClick={() => setRegiune("Regiunea Sud-Vest")}
+                  >
+                    Sud-Vest
+                  </button>
+
+                  <button
+                    className="text-lg font-medium leading-snug tracking-tight text-orange-500 hover:underline mt-3"
+                    onClick={() => setRegiune("Regiunea Centru")}
+                  >
+                    Centru
+                  </button>
+
+                  <button
+                    className="text-lg font-medium leading-snug tracking-tight text-orange-500 hover:underline mt-3"
+                    onClick={() => setRegiune("Regiunea Sud-Muntenia")}
+                  >
+                    Sud-Muntenia
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div className="lg:col-span-4 bg-white p-4">
+              <div className="max-w-sm mx-auto md:max-w-none">
+                {/* Articles container */}
+                <div className="grid gap-12 md:grid-cols-3 md:gap-x-6 md:gap-y-8 items-start">
+                  {filteredPost.map((card: any, index: any) => {
+                    const imageSrc =
+                      typeof card.imagine === "string" &&
+                      card.imagine.trim() !== ""
+                        ? card.imagine
+                        : TutorialImage01;
+                    return (
+                      <Link href={`/proiecte/${card._id}`} key={index}>
+                        <CardArticle
+                          imagine={imageSrc}
+                          titlu={card.titlu}
+                          intro={card.intro}
+                          activ={card.activ}
+                          beneficiariIntro={card.beneficiariIntro}
+                          valoare={card.valoare}
+                          cofinantare={card.cofinantare}
+                          locatie={card.locatie}
+                          proiect={card.proiect}
+                          firma={card.firma}
+                        />
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
             </div>
           </div>
         </div>
