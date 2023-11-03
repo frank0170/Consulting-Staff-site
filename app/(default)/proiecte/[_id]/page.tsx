@@ -1,12 +1,10 @@
+"use client";
+
 import TutorialImage01 from "@/public/images/default.png";
 import Image from "next/image";
 import { proiecte } from "@/content/proiecte";
 import ContactForm from "./contactForm";
-
-export const metadata = {
-  title: "Proiecte",
-  description: "Page description",
-};
+import React, { useState } from "react";
 
 async function getProiect(id: any) {
   const res = await fetch(
@@ -20,9 +18,13 @@ async function getProiect(id: any) {
 }
 
 export default async function TutorialsContent({ params }: any) {
-  const proiect: any = await getProiect(params._id);
+  const proiect2: any = await getProiect(params._id);
 
   // console.log("proiect", proiect);
+
+  const [proiect, setProiect] = useState([]);
+
+  setProiect(proiect2);
 
   return (
     <div>
