@@ -3,6 +3,11 @@ import Image from "next/image";
 import { proiecte } from "@/content/proiecte";
 import ContactForm from "./contactForm";
 
+export const metadata = {
+  title: "Proiecte Fonduri",
+  description: "Fonduri nerambursabile",
+};
+
 async function getProiect(id: any) {
   const res = await fetch(
     `https://consult-basics-test-1aea35fb0e5c.herokuapp.com/api/example/${id}`
