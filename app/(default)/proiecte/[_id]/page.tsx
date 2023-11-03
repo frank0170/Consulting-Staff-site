@@ -22,7 +22,7 @@ export default async function TutorialsContent({ params }: any) {
 
   // console.log("proiect", proiect);
 
-  const [proiect, setProiect] = useState([]);
+  const [proiect, setProiect] = useState<any>([]);
 
   setProiect(proiect2);
 
