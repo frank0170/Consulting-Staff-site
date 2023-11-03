@@ -60,10 +60,7 @@ export default function TutorialsContent() {
   useEffect(() => {
     async function getProiecte() {
       const response = await fetch(
-        "https://consult-basics-test-1aea35fb0e5c.herokuapp.com/api/example",
-        {
-          cache: "no-store",
-        }
+        "https://lelica-crisan.ro/.netlify/functions/getProjects"
       );
 
       if (!response.ok) {
