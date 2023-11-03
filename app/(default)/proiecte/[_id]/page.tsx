@@ -10,7 +10,7 @@ export const metadata = {
 
 async function getProiect(id: any) {
   const res = await fetch(
-    `"https://lelica-crisan.ro/.netlify/functions/getProjectById/${id}`
+    `https://consult-basics-test-1aea35fb0e5c.herokuapp.com/api/example/${id}`
   );
   const data = await res.json();
 
