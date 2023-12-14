@@ -60,7 +60,7 @@ export default function TutorialsContent() {
   useEffect(() => {
     async function getProiecte() {
       const response = await fetch(
-        "https://lelica-crisan.ro/.netlify/functions/getProjects"
+        "https://oyster-app-w8fdz.ondigitalocean.app/api/example"
       );
 
       if (!response.ok) {

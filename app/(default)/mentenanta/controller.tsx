@@ -19,7 +19,7 @@ const page = () => {
 
   const [parola, setParola] = useState("");
   const [keyCheck, setKeyCheck] = useState("");
-  const [keyData, setKeyData] = useState('')
+  const [keyData, setKeyData] = useState("");
 
   // Define a state variable to hold the selected option
   const [selectedOption, setSelectedOption] = useState("/images/default.png");
@@ -30,11 +30,10 @@ const page = () => {
   };
 
   const createProiect = async () => {
-
-    const keysLock = localStorage.getItem('tokenKey')
+    const keysLock = localStorage.getItem("tokenKey");
 
     if (keysLock) {
-      setKeyData(keysLock)
+      setKeyData(keysLock);
     }
 
     const supplierData = {
@@ -53,17 +52,20 @@ const page = () => {
       locatieDesc: locDesc,
       eligibilitate: elgb,
       cheltuieliEligibile: cost,
-      token: keyData
+      token: keyData,
     };
 
     try {
-      const response = await fetch(`https://consult-basics-test-1aea35fb0e5c.herokuapp.com/api/example`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(supplierData),
-      });
+      const response = await fetch(
+        `https://oyster-app-w8fdz.ondigitalocean.app/api/example`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(supplierData),
+        }
+      );
 
       if (response.ok) {
         console.log("Supplier created successfully");
@@ -95,8 +97,7 @@ const page = () => {
   const parolaCheck = () => {
     if (parola === "NuStiuParola1234") {
       localStorage.setItem("key", "1234ghj");
-      localStorage.setItem("tokenKey", 'Jwt678')
-
+      localStorage.setItem("tokenKey", "Jwt678");
 
       window.location.reload();
     } else {
