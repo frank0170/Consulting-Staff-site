@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import TutorialImage01 from "@/public/images/consult-main.jpg";
 import TutorialImage02 from "@/public/images/tutorial-02.jpg";
@@ -8,12 +8,9 @@ import CardArticle from "@/components/cardAfaceri";
 import Link from "next/link";
 import { afacere1array } from "@/content/afaceri";
 
-
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 
 export default function TutorialsContent() {
-
-
   return (
     <section className="relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -21,8 +18,9 @@ export default function TutorialsContent() {
           {/* Page header */}
           <div className="max-w-3xl pb-5 md:pb-50 text-center md:text-left">
             <h1 className="h1">Afaceri de Vanzare</h1>
-            <p className="text-xl text-gray-600">Caută o afacere cu potențial de dezvoltare</p>
-
+            <p className="text-xl text-gray-600">
+              Caută o afacere cu potențial de dezvoltare
+            </p>
           </div>
 
           {/* Section tags */}
@@ -61,7 +59,10 @@ export default function TutorialsContent() {
             {/* Articles container */}
             <div className="grid gap-12 md:grid-cols-3 md:gap-x-6 md:gap-y-8 items-start">
               {afacere1array.map((card: any, index: any) => {
-                const imageSrc = typeof card.imagine === 'string' && card.imagine.trim() !== '' ? card.imagine : TutorialImage01;
+                const imageSrc =
+                  typeof card.imagine === "string" && card.imagine.trim() !== ""
+                    ? card.imagine
+                    : TutorialImage01;
                 return (
                   <Link href={`/afaceri/${index}`} key={index}>
                     <CardArticle
