@@ -57,7 +57,7 @@ const page = () => {
 
     try {
       const response = await fetch(
-        `https://oyster-app-w8fdz.ondigitalocean.app/api/example`,
+        `https://walrus-app-egm5v.ondigitalocean.app/api/example`,
         {
           method: "POST",
           headers: {

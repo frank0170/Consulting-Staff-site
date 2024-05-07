@@ -10,7 +10,7 @@ export const metadata = {
 
 async function getProiect(id: any) {
   const res = await fetch(
-    `https://oyster-app-w8fdz.ondigitalocean.app/api/example/${id}`
+    `https://walrus-app-egm5v.ondigitalocean.app/api/example/${id}`
   );
   const data = await res.json();
 

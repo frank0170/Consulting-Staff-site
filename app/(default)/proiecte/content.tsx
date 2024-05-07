@@ -60,7 +60,7 @@ export default function TutorialsContent() {
   useEffect(() => {
     async function getProiecte() {
       const response = await fetch(
-        "https://oyster-app-w8fdz.ondigitalocean.app/api/example"
+        "https://walrus-app-egm5v.ondigitalocean.app/api/example"
       );
 
       if (!response.ok) {
