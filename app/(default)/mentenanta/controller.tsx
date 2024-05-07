@@ -1,6 +1,7 @@
 "use client";
 
 import { use, useEffect, useState } from "react";
+import { parfum } from "./utils/env";
 
 const page = () => {
   const [titlu, setTitlu] = useState<any>();
@@ -95,7 +96,7 @@ const page = () => {
   };
 
   const parolaCheck = () => {
-    if (parola === "NuStiuParola1234") {
+    if (parola === parfum) {
       localStorage.setItem("key", "1234ghj");
       localStorage.setItem("tokenKey", "Jwt678");
 

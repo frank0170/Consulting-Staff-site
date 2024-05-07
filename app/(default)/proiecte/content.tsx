@@ -86,7 +86,7 @@ export default function TutorialsContent() {
   );
   return (
     <section className="relative">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="pt-28 pb-12 md:pt-28 md:pb-20">
           {/* Page header */}
           <div className="max-w-3xl pb-5 md:pb-50 text-center md:text-left">
